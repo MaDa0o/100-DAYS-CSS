@@ -1,0 +1,90 @@
+    /* // delete the following line if no text is used */
+    /* // edit the line if you wanna use other fonts */
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+    /* // use only the available space inside the 400x400 frame */
+
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: 'Courier New', Courier, monospace;
+        color: white;
+    }
+
+    body{
+        display: flex;
+        flex-direction: column;
+        /* background-color: lightgray; */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .frame{
+        margin-top: 10%;
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        height: 400px;
+        background-image: linear-gradient(to top right, #43389F 0%, #4ec6ca 100%); 
+        justify-content: center;
+        align-items: center;
+    }
+
+    .number_div{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        height: 100px;
+        /* background-color: black; */
+        transform: translateY(10px);
+    }
+
+    .one-slash{
+        position: absolute;
+        left: -4px;
+        width: 24px;
+        height: 40;
+        background-color: white;
+        border-radius: 3px;
+        transform: rotate(58deg);
+        /* transform: translateX(10px); */
+    }
+
+    .one{
+        flex-basis: 30px;
+        background-color: white;
+        z-index: 10;
+        border-radius: 3px;
+        transform: translateX(15px);
+        box-shadow: 0 0 13px 0 rgba(0,0,0,0.2);
+        
+    }
+
+    .zero{
+        flex-basis: 100px;
+        z-index: 8;
+        border: 24px solid white;
+        border-radius: 100%;
+        box-shadow: 0 0 13px 0 rgba(0,0,0,0.2);
+    }
+
+    .zero-one{
+        transform: translateX(10px);
+    }
+
+    .zero-two{
+        transform: translateX(-10px);
+        z-index: 6;
+    }
+
+    .big{
+        font-size: 80px;
+        font-weight: bolder;
+    }
+
+    .small{
+        font-size: 25px;
+        transform: translateY(-15px);
+    }
