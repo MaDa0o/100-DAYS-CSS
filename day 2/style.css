@@ -63,6 +63,8 @@ body{
     transform: translateY(20px);
 }
 
+/* ANIMATION close in*/
+
 .hamburger.open .line{
     transform: translateX(-18px);
     width: 40px;
@@ -78,6 +80,8 @@ body{
     box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
     transform: translateY(-1px);
 }
+
+/* ANIMATION rotate */
 
 .hamburger.rot .line::before{
     transform: rotate(45deg);
