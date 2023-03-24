@@ -233,7 +233,7 @@
     background-color: #FA7373;
 }
 
-.point:hover .tooltip{
+.point:hover .tooltip{              /*hover changes property after mouse hovers over it*/
     visibility: visible;
 	opacity: 1;
 	transform: translate3d(-50%, 0, 0);
