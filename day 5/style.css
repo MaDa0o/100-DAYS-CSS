@@ -1,0 +1,287 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.frame {
+    display: flex;
+    flex-direction: row;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+    background: #42A7A1;
+    color: #fff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    width: 280px;
+    height: 220px;
+    background-color: white;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 60px;
+    background-color: #F1BA64;
+}
+
+.left-text{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding-left: 10px;
+}
+
+.right-text{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: right;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.big {
+	font-weight: 600;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.small {
+    font-weight: 400;
+    font-size: 11px;
+}
+
+.parameter{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 30px;
+    justify-content: right;
+    align-items: center;
+}
+
+.parameter span{
+    font-size: 9px;
+	color: #606060;
+    padding: 0 25px 0 10px;
+}
+
+.dash{
+    width: 15px;
+    height: 3px;
+    border-radius: 3px;
+}
+
+.red{
+    background-color: #FA7373;
+}
+
+.blue{
+    background-color: #7BA2FF;
+}
+
+.graphs{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90px;
+}
+
+.line-1 ,.line-2 ,.line-3{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #F2F2F2;
+}
+
+.line-2{
+    transform: translateY(45px);
+}
+
+.line-3{
+    transform: translateY(90px);
+}
+
+.blue-data svg{
+    position: relative;
+}
+
+.blue-data polyline{
+    stroke: #7BA2FF;
+    fill: none;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    background: transparent;
+}
+
+.red-data svg{
+    position: absolute;
+}
+
+.red-data polyline{
+    stroke: #FA7373;
+    fill: none;
+    stroke-width: 2px;
+    stroke-linecap: round;
+}
+
+.footer span{
+    font-size: 9px;
+    color: #606060;
+    padding: 0 10px 0 10px;
+}
+
+.point{
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+.red-data .point
+{
+    background-color: #FA7373;
+}
+
+.red-data .point-1{
+    left: 6;
+    top: 43;
+}
+.red-data .point-2{
+    left: 47;
+    top: 9;
+}
+.red-data .point-3{
+    left: 87;
+    top: 20;
+}
+.red-data .point-4{
+    left: 127;
+    top: 8;
+}
+.red-data .point-5{
+    left: 168;
+    top: 35;
+}
+.red-data .point-6{
+    left: 208;
+    top: 45;
+}
+.red-data .point-7{
+    left: 248;
+    top: 16;
+}
+
+.tooltip{
+    position: absolute;
+    display: inline;
+	bottom: 13px;
+	left: 50%;
+	transform: translate3d(-50%, 25px, 0);
+	font-weight: 600;
+	font-size: 11px;
+	line-height: 11px;
+	color: #fff;
+	padding: 8px 6px;
+    visibility: hidden;
+    opacity: 0;
+	border-radius: 3px;
+    transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s;
+}
+
+.red-data .tooltip::after{
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #FA7373 transparent transparent transparent;
+}
+
+.red-data .tooltip{
+    background-color: #FA7373;
+}
+
+.point:hover .tooltip{
+    visibility: visible;
+	opacity: 1;
+	transform: translate3d(-50%, 0, 0);
+}
+.blue-data .point
+    {
+        background-color: #7BA2FF;
+    }
+    
+    .blue-data .point-1{
+        left: 6;
+        top: 58;
+    }
+    .blue-data .point-2{
+        left: 47;
+        top: 47;
+    }
+    .blue-data .point-3{
+        left: 87;
+        top: 62;
+    }
+    .blue-data .point-4{
+        left: 127;
+        top: 52;
+    }
+    .blue-data .point-5{
+        left: 168;
+        top: 58;
+    }
+    .blue-data .point-6{
+        left: 208;
+        top: 71;
+    }
+    .blue-data .point-7{
+        left: 248;
+        top: 61;
+    }
+
+    .blue-data .tooltip{
+        background-color: #7BA2FF;
+    }
+        .blue-data .tooltip::after{
+            content: " ";
+            position: absolute;
+            top: 100%; /* At the bottom of the tooltip */
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #7BA2FF transparent transparent transparent;
+        }
