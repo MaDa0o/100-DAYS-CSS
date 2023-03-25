@@ -1,0 +1,167 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.frame {
+    display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+    background: #CA7C4E;
+    background: linear-gradient(to top right, #EEBE6C 0%, #CA7C4E 100%);
+    color: #786450;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-box{
+    display: flex;
+    width: 320px;
+    height: 320px;
+    background-color: white;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.3);
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 200px;
+    text-align: center;
+}
+
+.pfp{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    left: 65;
+    top: 40;
+    border-radius: 50%;
+}
+.img{position: relative;}
+
+.circle-1{
+    position: absolute;
+    width: 76px;
+    height: 76px;
+    left: -3;
+    top: -3;
+    border-width: 1px;
+	border-style: solid;
+	border-color: #786450 #786450 #786450 transparent;
+    border-radius: 50%;
+    /* transform: translate(-3px,-3px); */
+    transform-origin: center;
+    transition: all .5s ease-in-out;
+}
+
+.circle-2{
+    position: absolute;
+    width: 82px;
+    height: 82px;
+    left: -6;
+    top: -6;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #786450 transparent #786450 #786450;
+    border-radius: 50%;
+    transform-origin: center;
+    /* transform: translate(-6px,-6px);         this was not allowing the rotate to occur so i used top left instead*/  
+    transition: all 1.5s ease-in-out;
+}
+
+.pfp:hover .circle-1{
+    cursor: pointer;
+    transform: rotate(360deg);
+}
+
+.pfp:hover .circle-2{
+    cursor: pointer;
+    transform: rotate(-360deg);
+}
+
+.name{
+    font-size: 15px;
+	font-weight: 600;
+	margin-top: 20px;
+    transform: translateY(40px);
+}
+
+.des{
+    font-size: 11px;
+    transform: translateY(40px);
+}
+
+.actions{
+    margin-top: 66px;
+}
+
+.btn {
+    display: block;
+    width: 120px;
+    height: 30px;
+    margin: 0 auto 10px auto;
+    background: none;
+    border: 1px solid #786450;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    box-sizing: border-box;
+    transition: all .3s ease-in-out;
+    color: #786450;
+    line-height: 30px;
+}
+
+.btn:hover{
+    background-color: #786450;
+    color: white;
+}
+
+
+.stats{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 120px;
+    justify-content: space-between;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    height: 106px;
+    background-color: #F5E8DF;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.box .value{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.box .parameter{
+    font-size: 11px;
+}
+
+.box:hover{
+    background-color: #E1CFC2;
+    cursor: pointer;
+}
