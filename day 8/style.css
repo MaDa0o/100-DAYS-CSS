@@ -1,0 +1,193 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+
+
+/* used filter blur and contrast to show a fluid motion */
+
+*{
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+.frame {
+    display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: black;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    justify-content: center;
+    align-items: center;
+    filter: contrast(25);
+}
+
+.ball{
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 50%;
+    filter: blur(15px);
+}
+
+.blubb::after{
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  filter: blur(15px);
+}
+
+.blubb:nth-child(1)::after{
+  transform-origin: 25px 37px;
+  transform: rotate( random(300) +deg);
+  animation: rotate 2.7s ease-in-out .2s infinite;
+}
+.blubb:nth-child(2)::after{
+  transform-origin: 35px 35px;
+  transform: rotate( random(300) +deg);
+  animation: rotate 2.9s ease-in-out .4s infinite;
+}
+.blubb:nth-child(3)::after{
+  transform-origin: 34px 0px;
+  transform: rotate( random(300) +deg);
+  animation: rotate 3.1s ease-in-out .6s infinite;
+}
+.blubb:nth-child(4)::after{
+  transform-origin: 31px 31px;
+  transform: rotate( random(300) +deg);
+  animation: rotate 3.3s ease-in-out .8s infinite;
+}
+.blubb:nth-child(5)::after{
+  transform-origin: 2px 28px;
+  transform: rotate( random(300) +deg);
+  animation: rotate 3.5s ease-in-out 1s infinite;
+}
+.blubb:nth-child(6)::after{
+  transform-origin: 25px 25px;
+  transform: rotate( random(300) +deg);
+  animation: rotate 3.7s ease-in-out 1.2s infinite;
+}
+.blubb:nth-child(7)::after{
+  transform-origin: 22px 2px;
+  transform: rotate( random(300) +deg);
+  animation: rotate 3.9s ease-in-out 1.4s infinite;
+}
+.blubb:nth-child(8)::after{
+  transform-origin: 19px 19px;
+  transform: rotate( random(300) +deg);
+  animation: rotate 2.7s ease-in-out .2s infinite;
+}
+
+
+.particle::after{
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: white;
+  filter: blur(3px);
+  border-radius: 50%;
+}
+
+.particle:nth-child(1)::after{
+  width: 8px;
+  height: 8px;
+  transform-origin: -50% 250%;
+  animation: rotate 3.7s ease-in-out .2s infinite;
+  transform: rotate( random(300) +deg);
+}
+.particle:nth-child(2)::after{
+  width: 9px;
+  height: 9px;
+  transform-origin: -100% 150%;
+  animation: rotate 3.9s ease-in-out .4s infinite;
+  transform: rotate( random(300) +deg);
+}
+.particle:nth-child(3)::after{
+  width: 10px;
+  height: 10px;
+  transform-origin: 200% -200%;
+  animation: rotate 4.1s ease-in-out .6s infinite;
+  transform: rotate( random(300) +deg);
+}
+.particle:nth-child(4)::after{
+  width: 12px;
+  height: 12px;
+  transform-origin: -400% -400%;
+  animation: rotate 4.3s ease-in-out .8s infinite;
+  transform: rotate( random(300) +deg);
+}
+.particle:nth-child(5)::after{
+  width: 14px;
+  height: 14px;
+  transform-origin: -200% 50%;
+  animation: rotate 4.5s ease-in-out 1s infinite;
+  transform: rotate( random(300) +deg);
+}
+.particle:nth-child(6)::after{
+  width: 16px;
+  height: 16px;
+  transform-origin: 200% 300%;
+  animation: rotate 4.7s ease-in-out 1.2s infinite;
+  transform: rotate( random(300) +deg);
+}
+.particle:nth-child(7)::after{
+  width: 18px;
+  height: 18px;
+  transform-origin: 275% 250%;
+  animation: rotate 4.9s ease-in-out 1.4s infinite;
+  transform: rotate( random(300) +deg);
+}
+.particle:nth-child(8)::after{
+  width: 20px;
+  height: 20px;
+  transform-origin: -150% 25%;
+  animation: rotate 5.1s ease-in-out 1.6s infinite;
+  transform: rotate( random(300) +deg);
+}
+.particle:nth-child(9)::after{
+  width: 22px;
+  height: 22px;
+  transform-origin: -400% -400%;
+  animation: rotate 5.3s ease-in-out 1.8s infinite;
+  transform: rotate( random(300) +deg);
+}
+.particle:nth-child(10)::after{
+  width: 24px;
+  height: 24px;
+  transform-origin: -150% 400%;
+  animation: rotate 5.5s ease-in-out 2s infinite;
+  transform: rotate( random(300) +deg);
+}
+
+
+@keyframes rotate {
+	from {
+		rotate:0deg;
+	}
+	to {
+		rotate: 360deg;
+	}
+}
