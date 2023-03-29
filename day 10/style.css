@@ -1,0 +1,116 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #4C4C4C;
+  color: #fff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  font-size: 12px;
+}
+
+.clock{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+	width: 212px;
+	height: 212px;
+  top: 87px;
+  left: 87px;
+	background: #242424;
+	border: 7px solid #3A3A3A;
+	border-radius: 50%;
+	text-align: center;
+  justify-content: center;
+}
+
+.time{
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.dotted{
+  top: 15;
+  left: 15;
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  border-style: dotted;
+  border-radius: 50%;
+  border-color: #fff;
+}
+
+.spinner {
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
+}
+.spinner circle {
+  stroke: #F85B5B;
+  stroke-width: 3;
+  fill: none;
+  stroke-dasharray: 625;
+  -webkit-animation: spinner 5s linear infinite;
+          animation: spinner 5s linear infinite;
+  transform-origin: center center;
+  transform: rotate(-90deg);
+}
+
+.health span{
+  animation: beat 2s ease-in-out infinite;
+}
+
+@keyframes beat{
+  0%{
+    transform: scale(1);
+  }
+  
+  50%{
+    transform: scale(1.5);
+  }
+  
+  100%{
+    transform: scale(1);
+  }
+}
+
+@keyframes spinner {
+  from {
+    stroke-dashoffset: 625;
+    transform: rotate(-90deg) scaleY(1);
+  }
+  50% {
+    stroke-dashoffset: 0;
+    transform: rotate(-90deg) scaleY(1);
+  }
+  50.001% {
+    transform: rotate(-90deg) scaleY(-1);
+  }
+  to {
+    stroke-dashoffset: 625;
+    transform: rotate(-90deg) scaleY(-1);
+  }
+}
