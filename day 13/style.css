@@ -1,0 +1,226 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #fff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Building profile overview */
+.image:nth-child(4){
+    margin-top: 2.5px;
+    margin-right: 2.5px;
+    float: right;
+}
+.image:nth-child(3){
+    margin-top: 2.5px;
+    margin-right: 5px;
+    float: right;
+}
+.image:nth-child(1){
+    margin-top: 2.5px;
+    margin-left: 2.5px;
+    float: left;
+}
+.image:nth-child(2){
+    float: left;
+    margin-top: 2.5px;
+    margin-left: 2.5px;
+}
+
+.image{
+    height: 195px;
+    width: 195px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img{
+    position: absolute;
+}
+
+.image .overlay{
+    position: absolute;
+    background-color: black;
+    width: 195px;
+    height: 195px;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.button{
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: scale(2);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    border-color: #EC6565;
+}
+
+.button svg{
+    fill: #EC6565;
+    width: 50px;
+    height: 50px;
+    transform: scale(2);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.image:hover{
+    cursor: pointer;
+}
+.image:hover .overlay{
+    opacity: 0.4;
+}
+.image:hover .button svg{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+.image:hover .button{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+
+/* Building the profile page */
+.banner{
+    position: absolute;
+    width: 400px;
+    height: 180px;
+    background-image: url(https://i.kym-cdn.com/photos/images/original/001/894/303/db8.png);
+    background-size: contain;
+    background-position: center;
+    top: 0px;
+    left: 0px;
+    transform: translateY(-180px);
+    transition: transform .8s ease-in-out;
+}
+
+.info{
+    position: absolute;
+    width: 400px;
+    height: 220px;
+    background-color: #EC6565;
+    top: 180px;
+    left: 0px;
+    transform: translateY(220px);
+    transition: transform .8s ease-in-out;
+}
+.pfp{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    left: 150px;
+    top: 130px;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.3);
+    transform: translateY(-230px);
+    transition: transform .3s ease-in-out .6s;
+}
+
+.icon{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50%;
+    border-color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    top: 130px;
+    transition: background-color .3s ease-in-out;
+    transition: transform .3s ease-in-out .6s;
+}
+.icon svg{
+    position: absolute;
+    fill: #fff;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    left: 10px;
+    transition: fill .3s ease-in-out;
+}
+
+.icon1{
+    left: 73px;
+}
+.icon2{
+    left: 173px;
+}
+.icon3{
+    left: 273px;
+}
+
+.exit{
+    top: 10px;
+    right: 10px;
+    background-color: #EC6565;
+}
+
+.info .icon:hover{
+    background-color: #fff;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.info .icon:hover svg{
+    fill: #EC6565;
+}
+
+.name{
+    position: absolute;
+    top: 70px;
+    left: 157px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.banner .icon:hover{
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.banner .icon:hover svg{
+    fill: #EC6565;
+}
+
+.banner .icon{
+    transform: translateY(-70px);
+}
+
+
+/* actions when buttons are clicked */
+.active .banner { 
+    transform: translateY(0px);
+}
+.active .banner .icon{ 
+    transform: translateY(0px);
+}
+.active .info{
+    transform: translateY(0px);
+}
+.active .pfp{
+    transform: translateY(0px);
+}
