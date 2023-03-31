@@ -1,0 +1,131 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #4CB6DE;
+  color: #fff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    
+}
+
+.bi-quote{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    transform: rotate(180deg);
+    margin-top: 50px;
+    z-index: 0;
+}
+
+.text{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    font-size: 22px;
+    font-weight: 300;
+    justify-content: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.text span:hover{
+    cursor: pointer;
+}
+
+.text span{
+    padding-left: 5px;
+    width: 110px;
+    background-color: #286F8A;
+}
+
+.tooltip{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 130px;
+    position: absolute;
+    background-color: #286F8A;
+    font-size: 16px;
+    top: 0px;
+    left: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    cursor: text;
+}
+
+.header{
+    display: flex;
+    height: 30px;
+    background-color: #fff;
+    color: #286F8A;
+    align-items: center;
+}
+
+.header svg{
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
+    transition: all .2s ease-in-out;
+}
+
+.tooltip .info{
+    margin: 20px 0px 0px 20px;
+}
+
+.info span{
+    font-weight: bold;    
+}
+
+.text span:hover .tooltip{
+    transform: translateY(35px);
+    opacity: 1;
+    visibility: visible;
+}
+
+.header svg:hover{
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.tooltip::after{
+    position: absolute;
+	content: '';
+	width: 10px;
+	height: 10px;
+	transform: translateX(-80px) rotate(45deg);
+	bottom: -5px;
+	left: 50%;
+	margin-left: -5px;
+	background: #286F8A;
+}
+
+.author{
+    position: absolute;
+    top: 300;
+    font-size: 20px;
+}
