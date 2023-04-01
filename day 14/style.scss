@@ -1,0 +1,163 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+.frame {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #4B4841;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  width: 320px;
+  height: 180px;
+  perspective: 800px;
+}
+
+.card{
+  width: 100%;
+  height: 100%;
+  background-color: #FFCE4E;
+  box-shadow: 8px 10px 15px 0 rgba(0,0,0,0.5);
+  transform-style: preserve-3d;
+  transition: all 1.5s ease-in-out;
+  perspective: 1000px;
+}
+
+.container:hover .card{
+  transform: rotateX(180deg);
+  box-shadow: 8px -10px 15px 0 rgba(0,0,0,0.5);
+}
+
+.front{
+  transform-style: preserve-3d;
+  text-align: center;
+  backface-visibility: hidden;
+  position: relative;
+  top: 52px;
+}
+.front img{
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  position: relative;
+  transform-origin: 50% 100%;
+  animation: bikego .5s ease-in-out infinite;
+}
+
+.back{
+  transform-style: preserve-3d;
+  text-align: center;
+  backface-visibility: hidden;
+  position: relative;
+  transform: rotateX(180deg);
+  bottom:  22px;
+}
+
+.back img{
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  position: relative;
+  animation: heligo .5s ease-in-out infinite;
+}
+
+.street {
+			position: absolute;
+			top: 127px;
+			left: 80px;
+			width: 160px;
+			height: 3px;
+			overflow: hidden;
+			
+			@for $i from 1 through 9 {
+				.stripe-#{$i} {
+					position: absolute;
+					right: -25px;
+					top: 0;
+					height: 3px;
+					width: (2 + $i * 2) + px;
+					background: #4B4841;
+					border-radius: 3px;
+					animation: street (0.8 + random(2) / 10) + s linear (random(10) / 10) + s infinite;
+				}
+				
+			}
+			
+		}
+
+.sky {
+			position: absolute;
+			top: 0;
+			left: 80px;
+			bottom: 0;
+			width: 160px;
+			overflow: hidden;
+			
+			@for $i from 1 through 9 {
+				.cloud-#{$i} {
+					position: absolute;
+					right: -25px;
+					top: (20 + $i * 14) + px;
+					height: 3px;
+					width: (10 + random(150) / 10) + px;
+					background: #4B4841;
+					border-radius: 3px;
+					animation: cloud (0.6 + random(2) / 10) + s linear (random(10) / 10) + s infinite;
+				}
+				
+			}
+			
+		}
+
+@keyframes bikego {
+  0%,100%{
+    transform: scaleY(1);
+  }
+  50%{
+    transform: scaleY(1.03);
+  }
+  
+}
+
+@keyframes heligo {
+  0%,100%{
+    transform: translateY(3px);
+  }
+  50%{
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes street {
+	0% {
+		transform: translate3d(0, 0, 0) scaleX(1);
+	}
+	100% {
+		transform: translate3d(-210px,0,0) scaleX(.8);
+	}
+}
+
+@keyframes cloud {
+	0% {
+		transform: translate3d(0, 0, 0) scaleX(1);
+	}
+	100% {
+		transform: translate3d(-210px,0,0) scaleX(.8);
+	}
+}
