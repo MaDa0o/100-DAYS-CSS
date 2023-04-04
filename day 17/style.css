@@ -1,0 +1,67 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    background-image: linear-gradient(45deg, #000 25%, transparent 25%, transparent 50%, #000 50%, #000 75%, transparent 75%, #fff);
+  background-size: 15px 15px;
+}
+
+.box{
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    background-color: #353535;
+    top: 70px;
+    left: 70px;
+    box-shadow: 8px 10px 15px 0 rgba(0,0,0,0.5);
+}
+
+.polygon {
+	position: absolute;
+	width: 160px;
+	height: 140px;
+	top: 60px;
+	left: 50px;
+}
+.light {
+	fill: #eee;
+	transition: all .5s ease-in-out;
+}
+
+.middle {
+    fill: #ccc;
+	transition: all .5s ease-in-out;
+}
+
+.dark {
+    fill: #aaa;
+	transition: all .5s ease-in-out;
+}	
+
+.polygon:hover .light{
+    fill: #aaa;
+}
+.polygon:hover .middle{
+    fill: #eee;
+}
+.polygon:hover .dark{
+    fill: #ccc;
+}
+
