@@ -1,0 +1,104 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #3498db;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+label{
+    z-index: 2;
+    position: relative;
+    width: 50px;
+	height: 50px;
+    border: 2px solid #fff;
+	border-radius: 50%;
+	cursor: pointer;
+    margin-right: 15px;
+}
+
+input{
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+}
+
+#c1{
+    transform: translateX(30px);
+}
+#c3{
+    transform: translateX(-30px);
+}
+
+.trigger{
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 180px;
+    left: 188px;
+    transition: all .5s ease-in-out;
+}
+
+#circle-1:checked ~ .trigger {
+    transform: translateX(-94px);
+}
+#circle-2:checked ~ .trigger {
+    transform: translateX(0px);
+}
+#circle-3:checked ~ .trigger {
+	/* transform: translateX(120px); */
+    transform: translateX(94px);
+}
+
+.bg {
+    z-index: 0;
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	top: 0;
+	left: 0;
+	background: #3498db;
+	border-left: 400px solid #9b59b6;
+	border-right: 400px solid #1abc9c;
+	transition: all .5s ease;
+	transform: translateX(0px);
+}
+
+#circle-1:checked ~ .bg {
+    transform: translateX(0px);
+}
+#circle-2:checked ~ .bg {
+    transform: translateX(-400px);
+}
+#circle-3:checked ~ .bg {
+	transform: translateX(-800px);
+}
