@@ -1,0 +1,98 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #2C2E2E;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.pacman{
+  z-index: 1;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 150px;
+    left: 150px;
+    fill: none;
+	stroke: #F4D146;
+	stroke-width: 50px;
+	stroke-linecap: butt;
+    stroke-dasharray: 157;
+    animation: mouth .7s ease-in-out infinite;
+  }
+
+.eye{
+  z-index: 2;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 167px;
+  left: 204px;
+  fill: #2C2E2E;
+  animation: eye .7s ease-in-out infinite;
+}
+
+.food{
+  z-index: 0;
+  position: absolute;
+  height: 14px;
+  width: 240px;
+  stroke: #fff;
+  stroke-width: 14px;
+  stroke-linecap: round;
+  stroke-dasharray: 0px 50px;
+  top: 193px;
+  left: 180px;
+  animation: points .7s linear infinite;
+}
+
+@keyframes mouth{
+    0%, 100% {
+		stroke-dashoffset: 0;
+		transform: rotate(0deg) translate3d(0,0,0);
+	}
+	50% {
+		stroke-dashoffset: 39.25;
+		transform: rotate(45deg);
+	}
+}
+
+@keyframes eye {
+	0%, 100% {
+		transform: translate3d(0,0,0);
+	}
+	50% {
+		transform: translate3d(-6px, -3px, 0);
+	}
+}
+
+@keyframes points {
+	0% {
+		stroke-dashoffset: 0;
+	}
+	100% {
+		stroke-dashoffset: 50;
+	}
+}
