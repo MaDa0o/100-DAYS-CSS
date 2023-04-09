@@ -1,0 +1,192 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+    background: linear-gradient(to bottom, #28404E 0%, #1c2e38 100%); 
+  color: #fff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.headline{
+    color: #fff;
+    font-size: 24px;
+	text-transform: uppercase;
+	text-align: center;
+    line-height: 22px;
+    margin-top: 12px;
+}
+.small{
+    font-size: 16px;
+    font-weight: 400;
+}
+.big{
+    font-weight: 600;
+}
+
+.circle{
+    position: absolute;
+    width: 114px;
+    height: 114px;
+    border-radius: 50%;
+    top: 100px;
+    left: 143px;
+}
+
+.bg{
+    fill: none;
+	stroke-width: 10px;
+	stroke: #1B2A33;
+}
+
+.progress{
+    fill: none;
+    stroke-width: 10px;
+    stroke: #27E1AE;
+    stroke-linecap: round;
+    stroke-dasharray: 326.56;
+    stroke-dashoffset: 60;
+    transform-origin: 57px 57px;
+    transform: rotate(-90deg);
+    animation: cal 1.5s ease-out;
+}
+
+.text{
+    position: absolute;
+	width: 100%;
+	top: 37px;
+	font-size: 24px;
+	text-align: center;
+	font-weight: 600;
+	line-height: 22px;
+}
+
+.text .small{
+    font-size: 14px;
+	color: #648192;
+}
+
+
+
+.container{
+    position: absolute;
+    top: 250px;
+    width: 400px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    /* background-color: #27E1AE; */
+    text-align: center;
+}
+
+.circle-small{
+    display: inline-block;
+	position: relative;
+	width: 80px;
+	height: 80px;
+	margin: 0 20px;
+    margin-left: 75px;
+}
+
+.circle-small svg {
+    width: 80px;
+    height: 80px;
+}
+
+.circle-small .bg {
+    fill: none;
+    stroke-width: 6px;
+    stroke: #1B2A33;
+}
+
+.circle-small .progress {
+    fill: none;
+    stroke-width: 6px;
+    stroke: #5CE1EC;
+    stroke-linecap: round;
+    stroke-dasharray: 232.36;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+.progress.one {
+    stroke-dashoffset: 80;
+}
+
+.one{
+    animation: one 1.5s ease-out;
+}
+
+.progress.two {
+    stroke-dashoffset: 140;
+}
+
+.two{
+    animation: two 1.5s ease-out;
+}
+
+.circle-small .text {
+    position: absolute;
+    width: 100%;
+    top: 26px;
+    font-size: 17px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 16px;
+}
+    
+.circle-small  .text.small {
+        font-size: 12px;
+        color: #648192;
+}
+
+
+@keyframes cal{
+    0%{
+        stroke-dashoffset: 326.56;
+    }
+
+    100%{
+        stroke-dashoffset: 60;
+    }
+}
+
+@keyframes one{
+    0%{
+        stroke-dashoffset: 232.36;
+    }
+
+    100%{
+        stroke-dashoffset: 80;
+    }
+}
+
+@keyframes two{
+    0%{
+        stroke-dashoffset: 232.36;
+    }
+
+    100%{
+        stroke-dashoffset: 140;
+    }
+}
