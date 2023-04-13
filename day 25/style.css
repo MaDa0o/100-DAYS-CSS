@@ -1,0 +1,126 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+	background-image: url(https://pbs.twimg.com/media/E32d8xAXEAYMGyl?format=jpg&name=4096x4096);
+  background-size: cover ;
+  background-position: center;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.marker{
+	position: absolute;
+	z-index: 5;
+	top: 151px;
+	left: 176px;
+	font-size: 0;
+	cursor: pointer;
+	transform: perspective(600px) rotateY(0deg);
+	opacity: 1;
+    transition: all .5s ease;
+}
+
+.marker svg{
+    fill: rgb(90, 201, 30);
+    animation: hovering 1s ease-in-out infinite alternate;
+}
+
+.shadow {
+	width: 18px;
+	height: 4px;
+	background: black;
+	border-radius: 50%;
+	margin: 5px auto 0 auto;
+	animation: shadow 1s ease-in-out infinite alternate;
+    opacity: .5;
+}
+
+.card{
+    position: absolute;
+	z-index: 10;
+	width: 240px;
+	height: 190px;
+	top: 105px;
+	left: 80px;
+	border-radius: 3px;
+	overflow: hidden;
+	background: #fff;
+	box-shadow: 4px 8px 12px 0 rgba(0,0,0,0.2);
+	text-align: center;
+    pointer-events: none;
+	transform: perspective(600px) rotateY(90deg);
+	opacity: 0;
+	transition: all .5s ease;
+}
+
+.actions {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 40px;
+}	
+a {
+	float: left;
+	width: 50%;
+	text-align: center;
+	line-height: 40px;
+	text-decoration: none;
+	color: #1F8DE4;
+	font-weight: 400;
+	font-size: 12px;
+	pointer-events: visible;
+}
+		
+.divide {
+	position: absolute;
+	width: 1px;
+	height: 20px;
+	left: 50%;
+	top: 10px;
+	background: #91CCFB;
+}
+
+.marker.active{
+	transform: perspective(600px) rotateY(180deg);
+	opacity: 0;
+}
+
+.card.active{
+	transform: perspective(600px) rotateY(0deg);
+	opacity: 1;
+}
+
+
+@keyframes hovering {
+	from {
+		transform: translate3d(0,0,0);
+	}
+	to {
+		transform: translate3d(0,-5px,0);
+	}
+}
+
+@keyframes shadow {
+	from {
+		transform: scale(1) translate3d(0,0,0);
+	}
+	to {
+		transform: scale(1.25) translate3d(0,0,0);
+	}
+}
