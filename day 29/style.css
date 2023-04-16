@@ -1,0 +1,88 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+    background: #5CA4EA;
+    color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.searchbar{
+    position: absolute;
+    display: flex;
+    top: 180px;
+    left: 70px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+    width: 245px;
+    height: 40px;
+    background-color: #fff;
+    padding-left: 10px;
+}
+
+.search{
+    flex-basis: 200px;
+    border: none;
+    font-weight: 600;
+    color: #4D8DCB;
+}
+
+.search:focus{
+    outline: none;
+}
+
+.bi-search{
+    width: 25px;
+    height: 25px;
+    fill: #5CA4EA;
+    margin-top: 7.5px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.list{
+    width: 245px;
+    height: auto;
+    background-color: #fff;
+    list-style: none;
+    position: absolute;
+    top: 220px;
+    left: 70px;
+    border-top: #4D8DCB solid 2px;
+    font-weight: 500;
+    visibility: hidden;
+}
+.list.active{
+    visibility: visible;
+}
+
+.list-item{
+    height: 40px;
+    color: #333;
+    line-height: 40px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+.list-item:hover{
+    color: #5CA4EA;
+}
