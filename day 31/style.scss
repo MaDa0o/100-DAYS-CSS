@@ -1,0 +1,66 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+
+$duration: 60;
+$oscillations: 40;
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #7a66ff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.balls{
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-left: 194px;
+    margin-top: 7px;
+}
+
+.ball-1{
+    margin-top: 13px;
+}
+
+@for $i from 1 through 20{
+
+  $time: $duration / ($oscillations - 2 + (2*$i));
+
+  .ball-#{$i}{
+    animation: wave $time + s ease-in-out infinite;
+  }
+
+}
+
+
+@keyframes wave {
+  0%,100%{
+    transform: translateX(50px);
+  }
+
+  50%{
+    transform: translateX(-50px);
+  }
+}

@@ -1,0 +1,129 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+/* // use only the available space inside the 400x400 frame */
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #7a66ff;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.balls {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-left: 194px;
+  margin-top: 7px;
+}
+
+.ball-1 {
+  margin-top: 13px;
+}
+
+.ball-1 {
+  animation: wave 1.5s ease-in-out infinite;
+}
+
+.ball-2 {
+  animation: wave 1.4285714286s ease-in-out infinite;
+}
+
+.ball-3 {
+  animation: wave 1.3636363636s ease-in-out infinite;
+}
+
+.ball-4 {
+  animation: wave 1.3043478261s ease-in-out infinite;
+}
+
+.ball-5 {
+  animation: wave 1.25s ease-in-out infinite;
+}
+
+.ball-6 {
+  animation: wave 1.2s ease-in-out infinite;
+}
+
+.ball-7 {
+  animation: wave 1.1538461538s ease-in-out infinite;
+}
+
+.ball-8 {
+  animation: wave 1.1111111111s ease-in-out infinite;
+}
+
+.ball-9 {
+  animation: wave 1.0714285714s ease-in-out infinite;
+}
+
+.ball-10 {
+  animation: wave 1.0344827586s ease-in-out infinite;
+}
+
+.ball-11 {
+  animation: wave 1s ease-in-out infinite;
+}
+
+.ball-12 {
+  animation: wave 0.9677419355s ease-in-out infinite;
+}
+
+.ball-13 {
+  animation: wave 0.9375s ease-in-out infinite;
+}
+
+.ball-14 {
+  animation: wave 0.9090909091s ease-in-out infinite;
+}
+
+.ball-15 {
+  animation: wave 0.8823529412s ease-in-out infinite;
+}
+
+.ball-16 {
+  animation: wave 0.8571428571s ease-in-out infinite;
+}
+
+.ball-17 {
+  animation: wave 0.8333333333s ease-in-out infinite;
+}
+
+.ball-18 {
+  animation: wave 0.8108108108s ease-in-out infinite;
+}
+
+.ball-19 {
+  animation: wave 0.7894736842s ease-in-out infinite;
+}
+
+.ball-20 {
+  animation: wave 0.7692307692s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateX(50px);
+  }
+  50% {
+    transform: translateX(-50px);
+  }
+}/*# sourceMappingURL=style.css.map */
