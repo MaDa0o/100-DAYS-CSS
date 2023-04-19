@@ -1,0 +1,117 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+    background: rgb(255, 255, 101);
+  background: -webkit-linear-gradient(bottom left,rgb(251, 163, 31) 0%, rgb(255, 255, 101) 100%);
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.counter{
+    display: flex;
+    position: absolute;
+    width: 120px;
+    height: 40px;
+box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+    background-color: #fff;
+    border-radius: 30px;
+    top: 180px;
+    left: 140px;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+}
+
+.minus,.add{
+    width: 38px;
+    height: 38px;
+    background-color: #fff;
+    border-radius: 50%;
+    font-size: 35px;
+    line-height: 38px;
+    text-align: center;
+    font-weight: 600;
+    color: rgb(66, 196, 66);
+    cursor: pointer;
+}
+.minus{
+    margin-left:2px ;
+    transition: .3s ease-in-out;
+}
+.sign{
+    display: block;
+    content: '';
+    width: 26px;
+    height: 4px;
+    background-color: rgb(242, 100, 100);
+    position: absolute;
+    left: 8px;
+    top: 17px;
+    transition: .3s ease-in-out;
+}
+.add{
+    margin-right:2px ;
+    transition: .3s ease-in-out;
+}
+
+.add:hover{
+    color: #fff;
+    background-color: rgb(66, 196, 66);
+}
+
+.minus:hover{
+    background-color: rgb(242, 100, 100);
+}
+.minus:hover .sign{
+    background-color: #fff;
+}
+
+.val{
+    flex-basis: 40px;
+    background-color: #fff;
+    font-size: 24px;
+    text-align: center;
+    transition: all .3s ease-in-out;
+}
+
+.fadein{
+    animation: fadin .2s ease-in forwards;
+}
+.fadeout{
+    animation: fadout .2s ease-out forwards;
+}
+
+@keyframes fadin {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fadout {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
