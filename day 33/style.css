@@ -1,0 +1,76 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #8edbff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    z-index: 0;
+}
+
+.sun{
+    top: 9px;
+    left: 75px;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: rgb(255, 252, 70);
+    z-index: 1;
+    animation: moveRight 30s linear infinite alternate both;
+}
+
+.cloud-big{
+    position: absolute;
+    top: 100px;
+    left: 220px;
+    z-index: 2;
+    animation: moveLeft 30s linear infinite alternate both;
+}
+.cloud-medium{
+    position: absolute;
+    top: 70px;
+    left: 110px;
+    z-index: 2;
+    animation: moveLeft 30s linear infinite alternate both;
+}
+.cloud-small{
+    position: absolute;
+    top: 30px;
+    left: 180px;
+    z-index: 2;
+    animation: moveLeft 30s linear infinite alternate both;
+}
+
+
+@keyframes moveLeft {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-300%);
+	}
+}
+
+@keyframes moveRight {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(100%);
+	}
+}
