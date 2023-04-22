@@ -1,0 +1,60 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+.frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #585eff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.bg{
+    fill: none;
+    stroke: #2e2f4d;
+    stroke-width: 7px;
+}
+
+.loader{
+    fill: none;
+    stroke: white;
+    stroke-width: 5px;
+    stroke-dasharray: 290;
+    stroke-dashoffset: 0;
+    transform-origin: 50% 50%;
+    stroke-linecap: round;
+    animation: load 4s linear infinite both,spin 3s linear infinite both;
+}
+
+@keyframes load {
+    from{
+        stroke-dashoffset: 580;
+    }
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
