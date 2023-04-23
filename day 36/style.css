@@ -1,0 +1,128 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+.frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+  background: #343441;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.menubox{
+    width: 340px;
+    height: 220px;
+    background-color: #fff;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.3);
+}
+
+.taskbar{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    background-color: #4b4b60;
+}
+
+.icon{
+    flex-basis: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    background: none;
+}
+
+.search{
+    flex-basis: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 140px;
+}
+
+svg{
+    width: 20px;
+    height: 20px;
+    fill: #8b8bb0;
+    transition: all .3s ease-in-out;
+}
+
+.content{
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #3f3e3e;
+    transition: all .3s ease-in-out;
+    transform: translateY(10px);
+    opacity: 0;
+    pointer-events: none;
+}
+.info{
+    margin-top: 10px;
+}
+.l1{
+    height: 5px;
+    width: 280px;
+    background-color: #e7dbdb;
+    border-radius: 2px;
+}
+.l2{
+    height: 5px;
+    width: 240px;
+    background-color: #e7dbdb;
+    border-radius: 2px;
+    margin-top: 8px;
+}
+.l3{
+    height: 5px;
+    margin-top: 8px;
+    width: 280px;
+    background-color: #e7dbdb;
+    border-radius: 2px;
+}
+.l4{
+    margin-top: 8px;
+    height: 5px;
+    width: 200px;
+    background-color: #e7dbdb;
+    border-radius: 2px;
+}
+
+.content.active{
+    transform: translateY(0);
+    opacity: 1;
+    transition: all .5s ease-in-out;
+}
+
+.icon:hover svg{
+    fill: #fff;
+}
+.search:hover svg{
+    fill: #fff;
+}
+
+.icon.active{
+    background-color: rgb(104, 218, 218);
+}
+.active svg{
+    fill: #fff;
+}
