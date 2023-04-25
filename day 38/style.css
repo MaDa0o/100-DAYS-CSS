@@ -1,0 +1,59 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #e47676;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.clk{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+input{
+    visibility: hidden;
+}
+
+.logo{
+    position: absolute;
+    left: 165px;
+    top: 160px;
+}
+
+.white{
+    fill: white;
+    transform: scale(1);
+    transition: all .5s ease-in-out;
+}
+
+.red{
+    fill: #e47676;
+    transform: scale(0);
+    transition: all .5s ease-in-out;
+}
+
+input:checked ~ .clk .white{
+    transform: scale(15);
+}
+input:checked ~ .clk .red{
+    transform: scale(1);
+}
