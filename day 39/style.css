@@ -1,0 +1,142 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #3a6277;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.menu{
+    width: 50px;
+    height: 25px;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+    position: absolute;
+    top: 187.5px;
+    left: 175px;
+    cursor: pointer;
+    transform-origin: 50% 50%;
+}
+
+.content{
+    display: flex;
+    width: 280px;
+    height: 60px;
+    position: absolute;
+    top: 170px;
+    left: 60px;
+    color: #fff;
+    font-size: medium;
+    font-weight: 600;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s linear;
+}
+
+span{
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+span:hover{
+    color: #7091a3;
+}
+
+.menu.active{
+    pointer-events: none;
+    animation: activate 1s ease-in-out forwards;
+}
+
+.menu.inactive{
+    animation: deactivate 1s ease-in-out forwards;
+}
+
+.content.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+@keyframes activate {
+    0%{
+        width: 50px;
+        height: 25px;
+        top: 187.5px;
+        left: 175px;
+        border-width: 4px;
+    }
+    
+    20%{
+        width: 50px;
+        height: 15px;
+        top: 192.5px;
+        left: 175px;
+        border-width: 4px;
+    }
+    
+    40%{
+        width: 50px;
+        height: 60px;
+        top: 170px;
+        left: 175px;
+        border-width: 4px;
+    }
+    
+    100%{
+        width: 290px;
+        height: 60px;
+        top: 170px;
+        left: 55px;
+        border-width: 2px;
+    }
+
+}
+
+@keyframes deactivate {
+    0%{
+        width: 290px;
+        height: 60px;
+        top: 170px;
+        left: 55px;
+        border-width: 2px;
+    }
+    40%{
+        width: 50px;
+        height: 60px;
+        top: 170px;
+        left: 175px;
+        border-width: 4px;
+    }
+    100%{
+        width: 50px;
+        height: 25px;
+        top: 187.5px;
+        left: 175px;
+        border-width: 4px;
+    }
+
+}
