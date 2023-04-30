@@ -1,0 +1,95 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.sky{
+    width: 280px;
+    height: 280px;
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    background: linear-gradient(to bottom, #1d4253 0%,#6bb5c4 100%);
+    border-radius: 50%;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d4253', endColorstr='#6bb5c4',GradientType=0 );
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.star {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	border-radius: 1px;
+	background: #fff;
+}
+
+@for $i from 1 through 300 {
+	.star-#{$i} {
+		top: random(280) + px;
+		left: random(280) + px;
+		animation: ((random(20)+20)/10)+s flickr (random(20)/-10)+s infinite;
+	}
+}
+
+.sstar {
+	position: absolute;
+	top: 0;
+	left: -120px;
+	width: 120px;
+	height: 2px;
+	background: url(https://100dayscss.com/codepen/shooting-star.png) center center no-repeat;
+	background-size: 100% 100%;
+	transform: rotate(20deg);
+}
+
+
+@for $i from 1 through 10 {
+	.sstar-#{$i} {
+		top: (random(100)-30)+px;
+		animation: (random(5)+20)+s shooting-star (random(250)/10)+s infinite;
+	}
+}
+
+@keyframes flickr {
+	0%,100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.2;
+	}
+}
+
+@keyframes shooting-star {
+	0% {
+		transform: translate3d(0,0,0) rotate(20deg);
+	}
+	10%,100% {
+		transform: translate3d(451px,164px,0) rotate(20deg);
+	}
+}
