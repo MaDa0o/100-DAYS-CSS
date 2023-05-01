@@ -1,0 +1,270 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+/* // use only the available space inside the 400x400 frame */
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #2d2020;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.frame:hover .box {
+  animation-play-state: paused;
+}
+
+.box {
+  position: absolute;
+  border: 1px solid #fff;
+  background-color: #2d2020;
+}
+
+.box-1 {
+  width: 250px;
+  height: 250px;
+  top: 75px;
+  left: 75px;
+  animation: rotate 2s ease-in-out 0.0333333333s alternate infinite;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.box-2 {
+  width: 240px;
+  height: 240px;
+  top: 80px;
+  left: 80px;
+  animation: rotate 2s ease-in-out 0.0666666667s alternate infinite;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.box-3 {
+  width: 230px;
+  height: 230px;
+  top: 85px;
+  left: 85px;
+  animation: rotate 2s ease-in-out 0.1s alternate infinite;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.box-4 {
+  width: 220px;
+  height: 220px;
+  top: 90px;
+  left: 90px;
+  animation: rotate 2s ease-in-out 0.1333333333s alternate infinite;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.box-5 {
+  width: 210px;
+  height: 210px;
+  top: 95px;
+  left: 95px;
+  animation: rotate 2s ease-in-out 0.1666666667s alternate infinite;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.box-6 {
+  width: 200px;
+  height: 200px;
+  top: 100px;
+  left: 100px;
+  animation: rotate 2s ease-in-out 0.2s alternate infinite;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.box-7 {
+  width: 190px;
+  height: 190px;
+  top: 105px;
+  left: 105px;
+  animation: rotate 2s ease-in-out 0.2333333333s alternate infinite;
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.box-8 {
+  width: 180px;
+  height: 180px;
+  top: 110px;
+  left: 110px;
+  animation: rotate 2s ease-in-out 0.2666666667s alternate infinite;
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+.box-9 {
+  width: 170px;
+  height: 170px;
+  top: 115px;
+  left: 115px;
+  animation: rotate 2s ease-in-out 0.3s alternate infinite;
+  border-color: rgb(255, 255, 255);
+}
+
+.box-10 {
+  width: 160px;
+  height: 160px;
+  top: 120px;
+  left: 120px;
+  animation: rotate 2s ease-in-out 0.3333333333s alternate infinite;
+  border-color: rgb(255, 255, 255);
+}
+
+.box-11 {
+  width: 150px;
+  height: 150px;
+  top: 125px;
+  left: 125px;
+  animation: rotate 2s ease-in-out 0.3666666667s alternate infinite;
+  border-color: rgb(255, 255, 255);
+}
+
+.box-12 {
+  width: 140px;
+  height: 140px;
+  top: 130px;
+  left: 130px;
+  animation: rotate 2s ease-in-out 0.4s alternate infinite;
+  border-color: rgb(255, 255, 255);
+}
+
+.box-13 {
+  width: 130px;
+  height: 130px;
+  top: 135px;
+  left: 135px;
+  animation: rotate 2s ease-in-out 0.4333333333s alternate infinite;
+  border-color: rgb(255, 255, 255);
+}
+
+.box-14 {
+  width: 120px;
+  height: 120px;
+  top: 140px;
+  left: 140px;
+  animation: rotate 2s ease-in-out 0.4666666667s alternate infinite;
+  border-color: rgb(255, 255, 255);
+}
+
+.box-15 {
+  width: 110px;
+  height: 110px;
+  top: 145px;
+  left: 145px;
+  animation: rotate 2s ease-in-out 0.5s alternate infinite;
+  border-color: rgb(255, 255, 255);
+}
+
+.box-16 {
+  width: 100px;
+  height: 100px;
+  top: 150px;
+  left: 150px;
+  animation: rotate 2s ease-in-out 0.5333333333s alternate infinite;
+  border-color: rgb(255, 255, 255);
+}
+
+.box-17 {
+  width: 90px;
+  height: 90px;
+  top: 155px;
+  left: 155px;
+  animation: rotate 2s ease-in-out 0.5666666667s alternate infinite;
+  border-color: rgb(255, 255, 255);
+}
+
+.box-18 {
+  width: 80px;
+  height: 80px;
+  top: 160px;
+  left: 160px;
+  animation: rotate 2s ease-in-out 0.6s alternate infinite;
+  border-color: rgb(255, 255, 255);
+}
+
+.box-19 {
+  width: 70px;
+  height: 70px;
+  top: 165px;
+  left: 165px;
+  animation: rotate 2s ease-in-out 0.6333333333s alternate infinite;
+  border-color: rgb(255, 255, 255);
+}
+
+.box-20 {
+  width: 60px;
+  height: 60px;
+  top: 170px;
+  left: 170px;
+  animation: rotate 2s ease-in-out 0.6666666667s alternate infinite;
+  border-color: rgb(255, 255, 255);
+}
+
+.box-21 {
+  width: 50px;
+  height: 50px;
+  top: 175px;
+  left: 175px;
+  animation: rotate 2s ease-in-out 0.7s alternate infinite;
+  border-color: rgb(255, 255, 255);
+}
+
+.box-22 {
+  width: 40px;
+  height: 40px;
+  top: 180px;
+  left: 180px;
+  animation: rotate 2s ease-in-out 0.7333333333s alternate infinite;
+  border-color: rgb(255, 255, 255);
+}
+
+.box-23 {
+  width: 30px;
+  height: 30px;
+  top: 185px;
+  left: 185px;
+  animation: rotate 2s ease-in-out 0.7666666667s alternate infinite;
+  border-color: rgb(255, 255, 255);
+}
+
+.box-24 {
+  width: 20px;
+  height: 20px;
+  top: 190px;
+  left: 190px;
+  animation: rotate 2s ease-in-out 0.8s alternate infinite;
+  border-color: rgb(255, 255, 255);
+}
+
+.box-25 {
+  width: 10px;
+  height: 10px;
+  top: 195px;
+  left: 195px;
+  animation: rotate 2s ease-in-out 0.8333333333s alternate infinite;
+  border-color: rgb(255, 255, 255);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}/*# sourceMappingURL=style.css.map */

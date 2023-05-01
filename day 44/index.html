@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="frame">
+
+      </div>
+
+      <!-- added js code directly as script -->
+      <script>
+        const frame = document.querySelector(".frame");
+
+        for (let i = 1; i <=25; i++) {
+            addBox(i);          
+        }
+
+// function will add box element with numbered class names
+        function addBox(e) {
+            let name = 'box box-' + e;
+            const box = document.createElement('div');
+            frame.appendChild(box);
+            box.className = name;
+        }
+      </script>
+</body>
+</html>
