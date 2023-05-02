@@ -1,0 +1,85 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #7cc4f8;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.button{
+    position: absolute;
+    height: 60px;
+    width: 180px;
+    border: #a5d8fe solid 2px;
+    top: 170px;
+    left: 110px;
+    cursor: pointer;
+    line-height: 60px;
+    background-color: none;
+    transition: all .5s ease-in-out;
+}
+
+span{
+    position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		text-align: center;
+		line-height: 58px;
+		text-transform: uppercase;
+		font-size: 18px;
+		letter-spacing: 1px;
+		font-weight: 300;
+        color: #fff;
+}
+
+/* .button:hover{
+    background-color: #6caedd;
+} */
+
+
+.border{
+    fill: none;
+    /* stroke: #fff; */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    stroke-width: 1px;
+    /* stroke-linecap: square; */
+}
+
+.bg-line {
+    fill: #7cc4f8;
+    stroke: #91C9FF;
+    transition: all .8s ease-in-out;
+}
+
+.hl-line {
+    stroke: #fff;
+    stroke-dasharray: 40 480;
+    stroke-dashoffset: 40;
+    transition: all .8s ease-in-out;
+}
+
+.button:hover .bg-line{
+    fill: #4F95DA;   
+}
+
+.button:hover .hl-line{
+    stroke-dashoffset: -480;
+}
