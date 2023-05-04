@@ -1,0 +1,48 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    display: grid;                  /*for grid display*/
+    grid-template-columns: repeat(20, 1fr); /*repeat function utilizes all space to create 20 columns*/
+    grid-template-rows: repeat(20, 1fr);
+}
+
+.pixel{
+    width: 20px;
+    height: 20px;
+    border: rgb(198, 84, 58) solid 0.5px;
+    background-color: rgb(250, 95, 60);
+    cursor: pointer;
+}
+.pixel:hover{
+    background-color: rgb(219, 84, 54);
+}
+
+.pixel.active{
+    background-color: #fff;
+    border-color: #fff;
+}
