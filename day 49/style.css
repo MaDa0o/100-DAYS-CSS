@@ -1,0 +1,1676 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+/* // use only the available space inside the 400x400 frame */
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #202434;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+}
+
+.trigger {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.follow {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #2efc65;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform-origin: 50% 50%;
+  transform: translateX(190px) translateY(190px);
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+}
+.follow::after {
+  display: block;
+  content: " ";
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  border-radius: 50%;
+  border: #2efc65 solid 2px;
+  top: -1.5px;
+  left: -1.5px;
+  animation: pulse 1.5s ease-in-out infinite both;
+}
+
+.trigger-0:hover ~ .follow {
+  transform: translateX(0px) translateY(0px);
+}
+
+.trigger-1:hover ~ .follow {
+  transform: translateX(20px) translateY(0px);
+}
+
+.trigger-2:hover ~ .follow {
+  transform: translateX(40px) translateY(0px);
+}
+
+.trigger-3:hover ~ .follow {
+  transform: translateX(60px) translateY(0px);
+}
+
+.trigger-4:hover ~ .follow {
+  transform: translateX(80px) translateY(0px);
+}
+
+.trigger-5:hover ~ .follow {
+  transform: translateX(100px) translateY(0px);
+}
+
+.trigger-6:hover ~ .follow {
+  transform: translateX(120px) translateY(0px);
+}
+
+.trigger-7:hover ~ .follow {
+  transform: translateX(140px) translateY(0px);
+}
+
+.trigger-8:hover ~ .follow {
+  transform: translateX(160px) translateY(0px);
+}
+
+.trigger-9:hover ~ .follow {
+  transform: translateX(180px) translateY(0px);
+}
+
+.trigger-10:hover ~ .follow {
+  transform: translateX(200px) translateY(0px);
+}
+
+.trigger-11:hover ~ .follow {
+  transform: translateX(220px) translateY(0px);
+}
+
+.trigger-12:hover ~ .follow {
+  transform: translateX(240px) translateY(0px);
+}
+
+.trigger-13:hover ~ .follow {
+  transform: translateX(260px) translateY(0px);
+}
+
+.trigger-14:hover ~ .follow {
+  transform: translateX(280px) translateY(0px);
+}
+
+.trigger-15:hover ~ .follow {
+  transform: translateX(300px) translateY(0px);
+}
+
+.trigger-16:hover ~ .follow {
+  transform: translateX(320px) translateY(0px);
+}
+
+.trigger-17:hover ~ .follow {
+  transform: translateX(340px) translateY(0px);
+}
+
+.trigger-18:hover ~ .follow {
+  transform: translateX(360px) translateY(0px);
+}
+
+.trigger-19:hover ~ .follow {
+  transform: translateX(380px) translateY(0px);
+}
+
+.trigger-20:hover ~ .follow {
+  transform: translateX(0px) translateY(20px);
+}
+
+.trigger-21:hover ~ .follow {
+  transform: translateX(20px) translateY(20px);
+}
+
+.trigger-22:hover ~ .follow {
+  transform: translateX(40px) translateY(20px);
+}
+
+.trigger-23:hover ~ .follow {
+  transform: translateX(60px) translateY(20px);
+}
+
+.trigger-24:hover ~ .follow {
+  transform: translateX(80px) translateY(20px);
+}
+
+.trigger-25:hover ~ .follow {
+  transform: translateX(100px) translateY(20px);
+}
+
+.trigger-26:hover ~ .follow {
+  transform: translateX(120px) translateY(20px);
+}
+
+.trigger-27:hover ~ .follow {
+  transform: translateX(140px) translateY(20px);
+}
+
+.trigger-28:hover ~ .follow {
+  transform: translateX(160px) translateY(20px);
+}
+
+.trigger-29:hover ~ .follow {
+  transform: translateX(180px) translateY(20px);
+}
+
+.trigger-30:hover ~ .follow {
+  transform: translateX(200px) translateY(20px);
+}
+
+.trigger-31:hover ~ .follow {
+  transform: translateX(220px) translateY(20px);
+}
+
+.trigger-32:hover ~ .follow {
+  transform: translateX(240px) translateY(20px);
+}
+
+.trigger-33:hover ~ .follow {
+  transform: translateX(260px) translateY(20px);
+}
+
+.trigger-34:hover ~ .follow {
+  transform: translateX(280px) translateY(20px);
+}
+
+.trigger-35:hover ~ .follow {
+  transform: translateX(300px) translateY(20px);
+}
+
+.trigger-36:hover ~ .follow {
+  transform: translateX(320px) translateY(20px);
+}
+
+.trigger-37:hover ~ .follow {
+  transform: translateX(340px) translateY(20px);
+}
+
+.trigger-38:hover ~ .follow {
+  transform: translateX(360px) translateY(20px);
+}
+
+.trigger-39:hover ~ .follow {
+  transform: translateX(380px) translateY(20px);
+}
+
+.trigger-40:hover ~ .follow {
+  transform: translateX(0px) translateY(40px);
+}
+
+.trigger-41:hover ~ .follow {
+  transform: translateX(20px) translateY(40px);
+}
+
+.trigger-42:hover ~ .follow {
+  transform: translateX(40px) translateY(40px);
+}
+
+.trigger-43:hover ~ .follow {
+  transform: translateX(60px) translateY(40px);
+}
+
+.trigger-44:hover ~ .follow {
+  transform: translateX(80px) translateY(40px);
+}
+
+.trigger-45:hover ~ .follow {
+  transform: translateX(100px) translateY(40px);
+}
+
+.trigger-46:hover ~ .follow {
+  transform: translateX(120px) translateY(40px);
+}
+
+.trigger-47:hover ~ .follow {
+  transform: translateX(140px) translateY(40px);
+}
+
+.trigger-48:hover ~ .follow {
+  transform: translateX(160px) translateY(40px);
+}
+
+.trigger-49:hover ~ .follow {
+  transform: translateX(180px) translateY(40px);
+}
+
+.trigger-50:hover ~ .follow {
+  transform: translateX(200px) translateY(40px);
+}
+
+.trigger-51:hover ~ .follow {
+  transform: translateX(220px) translateY(40px);
+}
+
+.trigger-52:hover ~ .follow {
+  transform: translateX(240px) translateY(40px);
+}
+
+.trigger-53:hover ~ .follow {
+  transform: translateX(260px) translateY(40px);
+}
+
+.trigger-54:hover ~ .follow {
+  transform: translateX(280px) translateY(40px);
+}
+
+.trigger-55:hover ~ .follow {
+  transform: translateX(300px) translateY(40px);
+}
+
+.trigger-56:hover ~ .follow {
+  transform: translateX(320px) translateY(40px);
+}
+
+.trigger-57:hover ~ .follow {
+  transform: translateX(340px) translateY(40px);
+}
+
+.trigger-58:hover ~ .follow {
+  transform: translateX(360px) translateY(40px);
+}
+
+.trigger-59:hover ~ .follow {
+  transform: translateX(380px) translateY(40px);
+}
+
+.trigger-60:hover ~ .follow {
+  transform: translateX(0px) translateY(60px);
+}
+
+.trigger-61:hover ~ .follow {
+  transform: translateX(20px) translateY(60px);
+}
+
+.trigger-62:hover ~ .follow {
+  transform: translateX(40px) translateY(60px);
+}
+
+.trigger-63:hover ~ .follow {
+  transform: translateX(60px) translateY(60px);
+}
+
+.trigger-64:hover ~ .follow {
+  transform: translateX(80px) translateY(60px);
+}
+
+.trigger-65:hover ~ .follow {
+  transform: translateX(100px) translateY(60px);
+}
+
+.trigger-66:hover ~ .follow {
+  transform: translateX(120px) translateY(60px);
+}
+
+.trigger-67:hover ~ .follow {
+  transform: translateX(140px) translateY(60px);
+}
+
+.trigger-68:hover ~ .follow {
+  transform: translateX(160px) translateY(60px);
+}
+
+.trigger-69:hover ~ .follow {
+  transform: translateX(180px) translateY(60px);
+}
+
+.trigger-70:hover ~ .follow {
+  transform: translateX(200px) translateY(60px);
+}
+
+.trigger-71:hover ~ .follow {
+  transform: translateX(220px) translateY(60px);
+}
+
+.trigger-72:hover ~ .follow {
+  transform: translateX(240px) translateY(60px);
+}
+
+.trigger-73:hover ~ .follow {
+  transform: translateX(260px) translateY(60px);
+}
+
+.trigger-74:hover ~ .follow {
+  transform: translateX(280px) translateY(60px);
+}
+
+.trigger-75:hover ~ .follow {
+  transform: translateX(300px) translateY(60px);
+}
+
+.trigger-76:hover ~ .follow {
+  transform: translateX(320px) translateY(60px);
+}
+
+.trigger-77:hover ~ .follow {
+  transform: translateX(340px) translateY(60px);
+}
+
+.trigger-78:hover ~ .follow {
+  transform: translateX(360px) translateY(60px);
+}
+
+.trigger-79:hover ~ .follow {
+  transform: translateX(380px) translateY(60px);
+}
+
+.trigger-80:hover ~ .follow {
+  transform: translateX(0px) translateY(80px);
+}
+
+.trigger-81:hover ~ .follow {
+  transform: translateX(20px) translateY(80px);
+}
+
+.trigger-82:hover ~ .follow {
+  transform: translateX(40px) translateY(80px);
+}
+
+.trigger-83:hover ~ .follow {
+  transform: translateX(60px) translateY(80px);
+}
+
+.trigger-84:hover ~ .follow {
+  transform: translateX(80px) translateY(80px);
+}
+
+.trigger-85:hover ~ .follow {
+  transform: translateX(100px) translateY(80px);
+}
+
+.trigger-86:hover ~ .follow {
+  transform: translateX(120px) translateY(80px);
+}
+
+.trigger-87:hover ~ .follow {
+  transform: translateX(140px) translateY(80px);
+}
+
+.trigger-88:hover ~ .follow {
+  transform: translateX(160px) translateY(80px);
+}
+
+.trigger-89:hover ~ .follow {
+  transform: translateX(180px) translateY(80px);
+}
+
+.trigger-90:hover ~ .follow {
+  transform: translateX(200px) translateY(80px);
+}
+
+.trigger-91:hover ~ .follow {
+  transform: translateX(220px) translateY(80px);
+}
+
+.trigger-92:hover ~ .follow {
+  transform: translateX(240px) translateY(80px);
+}
+
+.trigger-93:hover ~ .follow {
+  transform: translateX(260px) translateY(80px);
+}
+
+.trigger-94:hover ~ .follow {
+  transform: translateX(280px) translateY(80px);
+}
+
+.trigger-95:hover ~ .follow {
+  transform: translateX(300px) translateY(80px);
+}
+
+.trigger-96:hover ~ .follow {
+  transform: translateX(320px) translateY(80px);
+}
+
+.trigger-97:hover ~ .follow {
+  transform: translateX(340px) translateY(80px);
+}
+
+.trigger-98:hover ~ .follow {
+  transform: translateX(360px) translateY(80px);
+}
+
+.trigger-99:hover ~ .follow {
+  transform: translateX(380px) translateY(80px);
+}
+
+.trigger-100:hover ~ .follow {
+  transform: translateX(0px) translateY(100px);
+}
+
+.trigger-101:hover ~ .follow {
+  transform: translateX(20px) translateY(100px);
+}
+
+.trigger-102:hover ~ .follow {
+  transform: translateX(40px) translateY(100px);
+}
+
+.trigger-103:hover ~ .follow {
+  transform: translateX(60px) translateY(100px);
+}
+
+.trigger-104:hover ~ .follow {
+  transform: translateX(80px) translateY(100px);
+}
+
+.trigger-105:hover ~ .follow {
+  transform: translateX(100px) translateY(100px);
+}
+
+.trigger-106:hover ~ .follow {
+  transform: translateX(120px) translateY(100px);
+}
+
+.trigger-107:hover ~ .follow {
+  transform: translateX(140px) translateY(100px);
+}
+
+.trigger-108:hover ~ .follow {
+  transform: translateX(160px) translateY(100px);
+}
+
+.trigger-109:hover ~ .follow {
+  transform: translateX(180px) translateY(100px);
+}
+
+.trigger-110:hover ~ .follow {
+  transform: translateX(200px) translateY(100px);
+}
+
+.trigger-111:hover ~ .follow {
+  transform: translateX(220px) translateY(100px);
+}
+
+.trigger-112:hover ~ .follow {
+  transform: translateX(240px) translateY(100px);
+}
+
+.trigger-113:hover ~ .follow {
+  transform: translateX(260px) translateY(100px);
+}
+
+.trigger-114:hover ~ .follow {
+  transform: translateX(280px) translateY(100px);
+}
+
+.trigger-115:hover ~ .follow {
+  transform: translateX(300px) translateY(100px);
+}
+
+.trigger-116:hover ~ .follow {
+  transform: translateX(320px) translateY(100px);
+}
+
+.trigger-117:hover ~ .follow {
+  transform: translateX(340px) translateY(100px);
+}
+
+.trigger-118:hover ~ .follow {
+  transform: translateX(360px) translateY(100px);
+}
+
+.trigger-119:hover ~ .follow {
+  transform: translateX(380px) translateY(100px);
+}
+
+.trigger-120:hover ~ .follow {
+  transform: translateX(0px) translateY(120px);
+}
+
+.trigger-121:hover ~ .follow {
+  transform: translateX(20px) translateY(120px);
+}
+
+.trigger-122:hover ~ .follow {
+  transform: translateX(40px) translateY(120px);
+}
+
+.trigger-123:hover ~ .follow {
+  transform: translateX(60px) translateY(120px);
+}
+
+.trigger-124:hover ~ .follow {
+  transform: translateX(80px) translateY(120px);
+}
+
+.trigger-125:hover ~ .follow {
+  transform: translateX(100px) translateY(120px);
+}
+
+.trigger-126:hover ~ .follow {
+  transform: translateX(120px) translateY(120px);
+}
+
+.trigger-127:hover ~ .follow {
+  transform: translateX(140px) translateY(120px);
+}
+
+.trigger-128:hover ~ .follow {
+  transform: translateX(160px) translateY(120px);
+}
+
+.trigger-129:hover ~ .follow {
+  transform: translateX(180px) translateY(120px);
+}
+
+.trigger-130:hover ~ .follow {
+  transform: translateX(200px) translateY(120px);
+}
+
+.trigger-131:hover ~ .follow {
+  transform: translateX(220px) translateY(120px);
+}
+
+.trigger-132:hover ~ .follow {
+  transform: translateX(240px) translateY(120px);
+}
+
+.trigger-133:hover ~ .follow {
+  transform: translateX(260px) translateY(120px);
+}
+
+.trigger-134:hover ~ .follow {
+  transform: translateX(280px) translateY(120px);
+}
+
+.trigger-135:hover ~ .follow {
+  transform: translateX(300px) translateY(120px);
+}
+
+.trigger-136:hover ~ .follow {
+  transform: translateX(320px) translateY(120px);
+}
+
+.trigger-137:hover ~ .follow {
+  transform: translateX(340px) translateY(120px);
+}
+
+.trigger-138:hover ~ .follow {
+  transform: translateX(360px) translateY(120px);
+}
+
+.trigger-139:hover ~ .follow {
+  transform: translateX(380px) translateY(120px);
+}
+
+.trigger-140:hover ~ .follow {
+  transform: translateX(0px) translateY(140px);
+}
+
+.trigger-141:hover ~ .follow {
+  transform: translateX(20px) translateY(140px);
+}
+
+.trigger-142:hover ~ .follow {
+  transform: translateX(40px) translateY(140px);
+}
+
+.trigger-143:hover ~ .follow {
+  transform: translateX(60px) translateY(140px);
+}
+
+.trigger-144:hover ~ .follow {
+  transform: translateX(80px) translateY(140px);
+}
+
+.trigger-145:hover ~ .follow {
+  transform: translateX(100px) translateY(140px);
+}
+
+.trigger-146:hover ~ .follow {
+  transform: translateX(120px) translateY(140px);
+}
+
+.trigger-147:hover ~ .follow {
+  transform: translateX(140px) translateY(140px);
+}
+
+.trigger-148:hover ~ .follow {
+  transform: translateX(160px) translateY(140px);
+}
+
+.trigger-149:hover ~ .follow {
+  transform: translateX(180px) translateY(140px);
+}
+
+.trigger-150:hover ~ .follow {
+  transform: translateX(200px) translateY(140px);
+}
+
+.trigger-151:hover ~ .follow {
+  transform: translateX(220px) translateY(140px);
+}
+
+.trigger-152:hover ~ .follow {
+  transform: translateX(240px) translateY(140px);
+}
+
+.trigger-153:hover ~ .follow {
+  transform: translateX(260px) translateY(140px);
+}
+
+.trigger-154:hover ~ .follow {
+  transform: translateX(280px) translateY(140px);
+}
+
+.trigger-155:hover ~ .follow {
+  transform: translateX(300px) translateY(140px);
+}
+
+.trigger-156:hover ~ .follow {
+  transform: translateX(320px) translateY(140px);
+}
+
+.trigger-157:hover ~ .follow {
+  transform: translateX(340px) translateY(140px);
+}
+
+.trigger-158:hover ~ .follow {
+  transform: translateX(360px) translateY(140px);
+}
+
+.trigger-159:hover ~ .follow {
+  transform: translateX(380px) translateY(140px);
+}
+
+.trigger-160:hover ~ .follow {
+  transform: translateX(0px) translateY(160px);
+}
+
+.trigger-161:hover ~ .follow {
+  transform: translateX(20px) translateY(160px);
+}
+
+.trigger-162:hover ~ .follow {
+  transform: translateX(40px) translateY(160px);
+}
+
+.trigger-163:hover ~ .follow {
+  transform: translateX(60px) translateY(160px);
+}
+
+.trigger-164:hover ~ .follow {
+  transform: translateX(80px) translateY(160px);
+}
+
+.trigger-165:hover ~ .follow {
+  transform: translateX(100px) translateY(160px);
+}
+
+.trigger-166:hover ~ .follow {
+  transform: translateX(120px) translateY(160px);
+}
+
+.trigger-167:hover ~ .follow {
+  transform: translateX(140px) translateY(160px);
+}
+
+.trigger-168:hover ~ .follow {
+  transform: translateX(160px) translateY(160px);
+}
+
+.trigger-169:hover ~ .follow {
+  transform: translateX(180px) translateY(160px);
+}
+
+.trigger-170:hover ~ .follow {
+  transform: translateX(200px) translateY(160px);
+}
+
+.trigger-171:hover ~ .follow {
+  transform: translateX(220px) translateY(160px);
+}
+
+.trigger-172:hover ~ .follow {
+  transform: translateX(240px) translateY(160px);
+}
+
+.trigger-173:hover ~ .follow {
+  transform: translateX(260px) translateY(160px);
+}
+
+.trigger-174:hover ~ .follow {
+  transform: translateX(280px) translateY(160px);
+}
+
+.trigger-175:hover ~ .follow {
+  transform: translateX(300px) translateY(160px);
+}
+
+.trigger-176:hover ~ .follow {
+  transform: translateX(320px) translateY(160px);
+}
+
+.trigger-177:hover ~ .follow {
+  transform: translateX(340px) translateY(160px);
+}
+
+.trigger-178:hover ~ .follow {
+  transform: translateX(360px) translateY(160px);
+}
+
+.trigger-179:hover ~ .follow {
+  transform: translateX(380px) translateY(160px);
+}
+
+.trigger-180:hover ~ .follow {
+  transform: translateX(0px) translateY(180px);
+}
+
+.trigger-181:hover ~ .follow {
+  transform: translateX(20px) translateY(180px);
+}
+
+.trigger-182:hover ~ .follow {
+  transform: translateX(40px) translateY(180px);
+}
+
+.trigger-183:hover ~ .follow {
+  transform: translateX(60px) translateY(180px);
+}
+
+.trigger-184:hover ~ .follow {
+  transform: translateX(80px) translateY(180px);
+}
+
+.trigger-185:hover ~ .follow {
+  transform: translateX(100px) translateY(180px);
+}
+
+.trigger-186:hover ~ .follow {
+  transform: translateX(120px) translateY(180px);
+}
+
+.trigger-187:hover ~ .follow {
+  transform: translateX(140px) translateY(180px);
+}
+
+.trigger-188:hover ~ .follow {
+  transform: translateX(160px) translateY(180px);
+}
+
+.trigger-189:hover ~ .follow {
+  transform: translateX(180px) translateY(180px);
+}
+
+.trigger-190:hover ~ .follow {
+  transform: translateX(200px) translateY(180px);
+}
+
+.trigger-191:hover ~ .follow {
+  transform: translateX(220px) translateY(180px);
+}
+
+.trigger-192:hover ~ .follow {
+  transform: translateX(240px) translateY(180px);
+}
+
+.trigger-193:hover ~ .follow {
+  transform: translateX(260px) translateY(180px);
+}
+
+.trigger-194:hover ~ .follow {
+  transform: translateX(280px) translateY(180px);
+}
+
+.trigger-195:hover ~ .follow {
+  transform: translateX(300px) translateY(180px);
+}
+
+.trigger-196:hover ~ .follow {
+  transform: translateX(320px) translateY(180px);
+}
+
+.trigger-197:hover ~ .follow {
+  transform: translateX(340px) translateY(180px);
+}
+
+.trigger-198:hover ~ .follow {
+  transform: translateX(360px) translateY(180px);
+}
+
+.trigger-199:hover ~ .follow {
+  transform: translateX(380px) translateY(180px);
+}
+
+.trigger-200:hover ~ .follow {
+  transform: translateX(0px) translateY(200px);
+}
+
+.trigger-201:hover ~ .follow {
+  transform: translateX(20px) translateY(200px);
+}
+
+.trigger-202:hover ~ .follow {
+  transform: translateX(40px) translateY(200px);
+}
+
+.trigger-203:hover ~ .follow {
+  transform: translateX(60px) translateY(200px);
+}
+
+.trigger-204:hover ~ .follow {
+  transform: translateX(80px) translateY(200px);
+}
+
+.trigger-205:hover ~ .follow {
+  transform: translateX(100px) translateY(200px);
+}
+
+.trigger-206:hover ~ .follow {
+  transform: translateX(120px) translateY(200px);
+}
+
+.trigger-207:hover ~ .follow {
+  transform: translateX(140px) translateY(200px);
+}
+
+.trigger-208:hover ~ .follow {
+  transform: translateX(160px) translateY(200px);
+}
+
+.trigger-209:hover ~ .follow {
+  transform: translateX(180px) translateY(200px);
+}
+
+.trigger-210:hover ~ .follow {
+  transform: translateX(200px) translateY(200px);
+}
+
+.trigger-211:hover ~ .follow {
+  transform: translateX(220px) translateY(200px);
+}
+
+.trigger-212:hover ~ .follow {
+  transform: translateX(240px) translateY(200px);
+}
+
+.trigger-213:hover ~ .follow {
+  transform: translateX(260px) translateY(200px);
+}
+
+.trigger-214:hover ~ .follow {
+  transform: translateX(280px) translateY(200px);
+}
+
+.trigger-215:hover ~ .follow {
+  transform: translateX(300px) translateY(200px);
+}
+
+.trigger-216:hover ~ .follow {
+  transform: translateX(320px) translateY(200px);
+}
+
+.trigger-217:hover ~ .follow {
+  transform: translateX(340px) translateY(200px);
+}
+
+.trigger-218:hover ~ .follow {
+  transform: translateX(360px) translateY(200px);
+}
+
+.trigger-219:hover ~ .follow {
+  transform: translateX(380px) translateY(200px);
+}
+
+.trigger-220:hover ~ .follow {
+  transform: translateX(0px) translateY(220px);
+}
+
+.trigger-221:hover ~ .follow {
+  transform: translateX(20px) translateY(220px);
+}
+
+.trigger-222:hover ~ .follow {
+  transform: translateX(40px) translateY(220px);
+}
+
+.trigger-223:hover ~ .follow {
+  transform: translateX(60px) translateY(220px);
+}
+
+.trigger-224:hover ~ .follow {
+  transform: translateX(80px) translateY(220px);
+}
+
+.trigger-225:hover ~ .follow {
+  transform: translateX(100px) translateY(220px);
+}
+
+.trigger-226:hover ~ .follow {
+  transform: translateX(120px) translateY(220px);
+}
+
+.trigger-227:hover ~ .follow {
+  transform: translateX(140px) translateY(220px);
+}
+
+.trigger-228:hover ~ .follow {
+  transform: translateX(160px) translateY(220px);
+}
+
+.trigger-229:hover ~ .follow {
+  transform: translateX(180px) translateY(220px);
+}
+
+.trigger-230:hover ~ .follow {
+  transform: translateX(200px) translateY(220px);
+}
+
+.trigger-231:hover ~ .follow {
+  transform: translateX(220px) translateY(220px);
+}
+
+.trigger-232:hover ~ .follow {
+  transform: translateX(240px) translateY(220px);
+}
+
+.trigger-233:hover ~ .follow {
+  transform: translateX(260px) translateY(220px);
+}
+
+.trigger-234:hover ~ .follow {
+  transform: translateX(280px) translateY(220px);
+}
+
+.trigger-235:hover ~ .follow {
+  transform: translateX(300px) translateY(220px);
+}
+
+.trigger-236:hover ~ .follow {
+  transform: translateX(320px) translateY(220px);
+}
+
+.trigger-237:hover ~ .follow {
+  transform: translateX(340px) translateY(220px);
+}
+
+.trigger-238:hover ~ .follow {
+  transform: translateX(360px) translateY(220px);
+}
+
+.trigger-239:hover ~ .follow {
+  transform: translateX(380px) translateY(220px);
+}
+
+.trigger-240:hover ~ .follow {
+  transform: translateX(0px) translateY(240px);
+}
+
+.trigger-241:hover ~ .follow {
+  transform: translateX(20px) translateY(240px);
+}
+
+.trigger-242:hover ~ .follow {
+  transform: translateX(40px) translateY(240px);
+}
+
+.trigger-243:hover ~ .follow {
+  transform: translateX(60px) translateY(240px);
+}
+
+.trigger-244:hover ~ .follow {
+  transform: translateX(80px) translateY(240px);
+}
+
+.trigger-245:hover ~ .follow {
+  transform: translateX(100px) translateY(240px);
+}
+
+.trigger-246:hover ~ .follow {
+  transform: translateX(120px) translateY(240px);
+}
+
+.trigger-247:hover ~ .follow {
+  transform: translateX(140px) translateY(240px);
+}
+
+.trigger-248:hover ~ .follow {
+  transform: translateX(160px) translateY(240px);
+}
+
+.trigger-249:hover ~ .follow {
+  transform: translateX(180px) translateY(240px);
+}
+
+.trigger-250:hover ~ .follow {
+  transform: translateX(200px) translateY(240px);
+}
+
+.trigger-251:hover ~ .follow {
+  transform: translateX(220px) translateY(240px);
+}
+
+.trigger-252:hover ~ .follow {
+  transform: translateX(240px) translateY(240px);
+}
+
+.trigger-253:hover ~ .follow {
+  transform: translateX(260px) translateY(240px);
+}
+
+.trigger-254:hover ~ .follow {
+  transform: translateX(280px) translateY(240px);
+}
+
+.trigger-255:hover ~ .follow {
+  transform: translateX(300px) translateY(240px);
+}
+
+.trigger-256:hover ~ .follow {
+  transform: translateX(320px) translateY(240px);
+}
+
+.trigger-257:hover ~ .follow {
+  transform: translateX(340px) translateY(240px);
+}
+
+.trigger-258:hover ~ .follow {
+  transform: translateX(360px) translateY(240px);
+}
+
+.trigger-259:hover ~ .follow {
+  transform: translateX(380px) translateY(240px);
+}
+
+.trigger-260:hover ~ .follow {
+  transform: translateX(0px) translateY(260px);
+}
+
+.trigger-261:hover ~ .follow {
+  transform: translateX(20px) translateY(260px);
+}
+
+.trigger-262:hover ~ .follow {
+  transform: translateX(40px) translateY(260px);
+}
+
+.trigger-263:hover ~ .follow {
+  transform: translateX(60px) translateY(260px);
+}
+
+.trigger-264:hover ~ .follow {
+  transform: translateX(80px) translateY(260px);
+}
+
+.trigger-265:hover ~ .follow {
+  transform: translateX(100px) translateY(260px);
+}
+
+.trigger-266:hover ~ .follow {
+  transform: translateX(120px) translateY(260px);
+}
+
+.trigger-267:hover ~ .follow {
+  transform: translateX(140px) translateY(260px);
+}
+
+.trigger-268:hover ~ .follow {
+  transform: translateX(160px) translateY(260px);
+}
+
+.trigger-269:hover ~ .follow {
+  transform: translateX(180px) translateY(260px);
+}
+
+.trigger-270:hover ~ .follow {
+  transform: translateX(200px) translateY(260px);
+}
+
+.trigger-271:hover ~ .follow {
+  transform: translateX(220px) translateY(260px);
+}
+
+.trigger-272:hover ~ .follow {
+  transform: translateX(240px) translateY(260px);
+}
+
+.trigger-273:hover ~ .follow {
+  transform: translateX(260px) translateY(260px);
+}
+
+.trigger-274:hover ~ .follow {
+  transform: translateX(280px) translateY(260px);
+}
+
+.trigger-275:hover ~ .follow {
+  transform: translateX(300px) translateY(260px);
+}
+
+.trigger-276:hover ~ .follow {
+  transform: translateX(320px) translateY(260px);
+}
+
+.trigger-277:hover ~ .follow {
+  transform: translateX(340px) translateY(260px);
+}
+
+.trigger-278:hover ~ .follow {
+  transform: translateX(360px) translateY(260px);
+}
+
+.trigger-279:hover ~ .follow {
+  transform: translateX(380px) translateY(260px);
+}
+
+.trigger-280:hover ~ .follow {
+  transform: translateX(0px) translateY(280px);
+}
+
+.trigger-281:hover ~ .follow {
+  transform: translateX(20px) translateY(280px);
+}
+
+.trigger-282:hover ~ .follow {
+  transform: translateX(40px) translateY(280px);
+}
+
+.trigger-283:hover ~ .follow {
+  transform: translateX(60px) translateY(280px);
+}
+
+.trigger-284:hover ~ .follow {
+  transform: translateX(80px) translateY(280px);
+}
+
+.trigger-285:hover ~ .follow {
+  transform: translateX(100px) translateY(280px);
+}
+
+.trigger-286:hover ~ .follow {
+  transform: translateX(120px) translateY(280px);
+}
+
+.trigger-287:hover ~ .follow {
+  transform: translateX(140px) translateY(280px);
+}
+
+.trigger-288:hover ~ .follow {
+  transform: translateX(160px) translateY(280px);
+}
+
+.trigger-289:hover ~ .follow {
+  transform: translateX(180px) translateY(280px);
+}
+
+.trigger-290:hover ~ .follow {
+  transform: translateX(200px) translateY(280px);
+}
+
+.trigger-291:hover ~ .follow {
+  transform: translateX(220px) translateY(280px);
+}
+
+.trigger-292:hover ~ .follow {
+  transform: translateX(240px) translateY(280px);
+}
+
+.trigger-293:hover ~ .follow {
+  transform: translateX(260px) translateY(280px);
+}
+
+.trigger-294:hover ~ .follow {
+  transform: translateX(280px) translateY(280px);
+}
+
+.trigger-295:hover ~ .follow {
+  transform: translateX(300px) translateY(280px);
+}
+
+.trigger-296:hover ~ .follow {
+  transform: translateX(320px) translateY(280px);
+}
+
+.trigger-297:hover ~ .follow {
+  transform: translateX(340px) translateY(280px);
+}
+
+.trigger-298:hover ~ .follow {
+  transform: translateX(360px) translateY(280px);
+}
+
+.trigger-299:hover ~ .follow {
+  transform: translateX(380px) translateY(280px);
+}
+
+.trigger-300:hover ~ .follow {
+  transform: translateX(0px) translateY(300px);
+}
+
+.trigger-301:hover ~ .follow {
+  transform: translateX(20px) translateY(300px);
+}
+
+.trigger-302:hover ~ .follow {
+  transform: translateX(40px) translateY(300px);
+}
+
+.trigger-303:hover ~ .follow {
+  transform: translateX(60px) translateY(300px);
+}
+
+.trigger-304:hover ~ .follow {
+  transform: translateX(80px) translateY(300px);
+}
+
+.trigger-305:hover ~ .follow {
+  transform: translateX(100px) translateY(300px);
+}
+
+.trigger-306:hover ~ .follow {
+  transform: translateX(120px) translateY(300px);
+}
+
+.trigger-307:hover ~ .follow {
+  transform: translateX(140px) translateY(300px);
+}
+
+.trigger-308:hover ~ .follow {
+  transform: translateX(160px) translateY(300px);
+}
+
+.trigger-309:hover ~ .follow {
+  transform: translateX(180px) translateY(300px);
+}
+
+.trigger-310:hover ~ .follow {
+  transform: translateX(200px) translateY(300px);
+}
+
+.trigger-311:hover ~ .follow {
+  transform: translateX(220px) translateY(300px);
+}
+
+.trigger-312:hover ~ .follow {
+  transform: translateX(240px) translateY(300px);
+}
+
+.trigger-313:hover ~ .follow {
+  transform: translateX(260px) translateY(300px);
+}
+
+.trigger-314:hover ~ .follow {
+  transform: translateX(280px) translateY(300px);
+}
+
+.trigger-315:hover ~ .follow {
+  transform: translateX(300px) translateY(300px);
+}
+
+.trigger-316:hover ~ .follow {
+  transform: translateX(320px) translateY(300px);
+}
+
+.trigger-317:hover ~ .follow {
+  transform: translateX(340px) translateY(300px);
+}
+
+.trigger-318:hover ~ .follow {
+  transform: translateX(360px) translateY(300px);
+}
+
+.trigger-319:hover ~ .follow {
+  transform: translateX(380px) translateY(300px);
+}
+
+.trigger-320:hover ~ .follow {
+  transform: translateX(0px) translateY(320px);
+}
+
+.trigger-321:hover ~ .follow {
+  transform: translateX(20px) translateY(320px);
+}
+
+.trigger-322:hover ~ .follow {
+  transform: translateX(40px) translateY(320px);
+}
+
+.trigger-323:hover ~ .follow {
+  transform: translateX(60px) translateY(320px);
+}
+
+.trigger-324:hover ~ .follow {
+  transform: translateX(80px) translateY(320px);
+}
+
+.trigger-325:hover ~ .follow {
+  transform: translateX(100px) translateY(320px);
+}
+
+.trigger-326:hover ~ .follow {
+  transform: translateX(120px) translateY(320px);
+}
+
+.trigger-327:hover ~ .follow {
+  transform: translateX(140px) translateY(320px);
+}
+
+.trigger-328:hover ~ .follow {
+  transform: translateX(160px) translateY(320px);
+}
+
+.trigger-329:hover ~ .follow {
+  transform: translateX(180px) translateY(320px);
+}
+
+.trigger-330:hover ~ .follow {
+  transform: translateX(200px) translateY(320px);
+}
+
+.trigger-331:hover ~ .follow {
+  transform: translateX(220px) translateY(320px);
+}
+
+.trigger-332:hover ~ .follow {
+  transform: translateX(240px) translateY(320px);
+}
+
+.trigger-333:hover ~ .follow {
+  transform: translateX(260px) translateY(320px);
+}
+
+.trigger-334:hover ~ .follow {
+  transform: translateX(280px) translateY(320px);
+}
+
+.trigger-335:hover ~ .follow {
+  transform: translateX(300px) translateY(320px);
+}
+
+.trigger-336:hover ~ .follow {
+  transform: translateX(320px) translateY(320px);
+}
+
+.trigger-337:hover ~ .follow {
+  transform: translateX(340px) translateY(320px);
+}
+
+.trigger-338:hover ~ .follow {
+  transform: translateX(360px) translateY(320px);
+}
+
+.trigger-339:hover ~ .follow {
+  transform: translateX(380px) translateY(320px);
+}
+
+.trigger-340:hover ~ .follow {
+  transform: translateX(0px) translateY(340px);
+}
+
+.trigger-341:hover ~ .follow {
+  transform: translateX(20px) translateY(340px);
+}
+
+.trigger-342:hover ~ .follow {
+  transform: translateX(40px) translateY(340px);
+}
+
+.trigger-343:hover ~ .follow {
+  transform: translateX(60px) translateY(340px);
+}
+
+.trigger-344:hover ~ .follow {
+  transform: translateX(80px) translateY(340px);
+}
+
+.trigger-345:hover ~ .follow {
+  transform: translateX(100px) translateY(340px);
+}
+
+.trigger-346:hover ~ .follow {
+  transform: translateX(120px) translateY(340px);
+}
+
+.trigger-347:hover ~ .follow {
+  transform: translateX(140px) translateY(340px);
+}
+
+.trigger-348:hover ~ .follow {
+  transform: translateX(160px) translateY(340px);
+}
+
+.trigger-349:hover ~ .follow {
+  transform: translateX(180px) translateY(340px);
+}
+
+.trigger-350:hover ~ .follow {
+  transform: translateX(200px) translateY(340px);
+}
+
+.trigger-351:hover ~ .follow {
+  transform: translateX(220px) translateY(340px);
+}
+
+.trigger-352:hover ~ .follow {
+  transform: translateX(240px) translateY(340px);
+}
+
+.trigger-353:hover ~ .follow {
+  transform: translateX(260px) translateY(340px);
+}
+
+.trigger-354:hover ~ .follow {
+  transform: translateX(280px) translateY(340px);
+}
+
+.trigger-355:hover ~ .follow {
+  transform: translateX(300px) translateY(340px);
+}
+
+.trigger-356:hover ~ .follow {
+  transform: translateX(320px) translateY(340px);
+}
+
+.trigger-357:hover ~ .follow {
+  transform: translateX(340px) translateY(340px);
+}
+
+.trigger-358:hover ~ .follow {
+  transform: translateX(360px) translateY(340px);
+}
+
+.trigger-359:hover ~ .follow {
+  transform: translateX(380px) translateY(340px);
+}
+
+.trigger-360:hover ~ .follow {
+  transform: translateX(0px) translateY(360px);
+}
+
+.trigger-361:hover ~ .follow {
+  transform: translateX(20px) translateY(360px);
+}
+
+.trigger-362:hover ~ .follow {
+  transform: translateX(40px) translateY(360px);
+}
+
+.trigger-363:hover ~ .follow {
+  transform: translateX(60px) translateY(360px);
+}
+
+.trigger-364:hover ~ .follow {
+  transform: translateX(80px) translateY(360px);
+}
+
+.trigger-365:hover ~ .follow {
+  transform: translateX(100px) translateY(360px);
+}
+
+.trigger-366:hover ~ .follow {
+  transform: translateX(120px) translateY(360px);
+}
+
+.trigger-367:hover ~ .follow {
+  transform: translateX(140px) translateY(360px);
+}
+
+.trigger-368:hover ~ .follow {
+  transform: translateX(160px) translateY(360px);
+}
+
+.trigger-369:hover ~ .follow {
+  transform: translateX(180px) translateY(360px);
+}
+
+.trigger-370:hover ~ .follow {
+  transform: translateX(200px) translateY(360px);
+}
+
+.trigger-371:hover ~ .follow {
+  transform: translateX(220px) translateY(360px);
+}
+
+.trigger-372:hover ~ .follow {
+  transform: translateX(240px) translateY(360px);
+}
+
+.trigger-373:hover ~ .follow {
+  transform: translateX(260px) translateY(360px);
+}
+
+.trigger-374:hover ~ .follow {
+  transform: translateX(280px) translateY(360px);
+}
+
+.trigger-375:hover ~ .follow {
+  transform: translateX(300px) translateY(360px);
+}
+
+.trigger-376:hover ~ .follow {
+  transform: translateX(320px) translateY(360px);
+}
+
+.trigger-377:hover ~ .follow {
+  transform: translateX(340px) translateY(360px);
+}
+
+.trigger-378:hover ~ .follow {
+  transform: translateX(360px) translateY(360px);
+}
+
+.trigger-379:hover ~ .follow {
+  transform: translateX(380px) translateY(360px);
+}
+
+.trigger-380:hover ~ .follow {
+  transform: translateX(0px) translateY(380px);
+}
+
+.trigger-381:hover ~ .follow {
+  transform: translateX(20px) translateY(380px);
+}
+
+.trigger-382:hover ~ .follow {
+  transform: translateX(40px) translateY(380px);
+}
+
+.trigger-383:hover ~ .follow {
+  transform: translateX(60px) translateY(380px);
+}
+
+.trigger-384:hover ~ .follow {
+  transform: translateX(80px) translateY(380px);
+}
+
+.trigger-385:hover ~ .follow {
+  transform: translateX(100px) translateY(380px);
+}
+
+.trigger-386:hover ~ .follow {
+  transform: translateX(120px) translateY(380px);
+}
+
+.trigger-387:hover ~ .follow {
+  transform: translateX(140px) translateY(380px);
+}
+
+.trigger-388:hover ~ .follow {
+  transform: translateX(160px) translateY(380px);
+}
+
+.trigger-389:hover ~ .follow {
+  transform: translateX(180px) translateY(380px);
+}
+
+.trigger-390:hover ~ .follow {
+  transform: translateX(200px) translateY(380px);
+}
+
+.trigger-391:hover ~ .follow {
+  transform: translateX(220px) translateY(380px);
+}
+
+.trigger-392:hover ~ .follow {
+  transform: translateX(240px) translateY(380px);
+}
+
+.trigger-393:hover ~ .follow {
+  transform: translateX(260px) translateY(380px);
+}
+
+.trigger-394:hover ~ .follow {
+  transform: translateX(280px) translateY(380px);
+}
+
+.trigger-395:hover ~ .follow {
+  transform: translateX(300px) translateY(380px);
+}
+
+.trigger-396:hover ~ .follow {
+  transform: translateX(320px) translateY(380px);
+}
+
+.trigger-397:hover ~ .follow {
+  transform: translateX(340px) translateY(380px);
+}
+
+.trigger-398:hover ~ .follow {
+  transform: translateX(360px) translateY(380px);
+}
+
+.trigger-399:hover ~ .follow {
+  transform: translateX(380px) translateY(380px);
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}/*# sourceMappingURL=style.css.map */

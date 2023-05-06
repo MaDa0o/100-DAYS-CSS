@@ -1,0 +1,88 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #202434;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    display: grid;
+    grid-template-columns: repeat(20,1fr);
+    grid-template-rows: repeat(20,1fr);
+}
+
+.trigger{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.follow{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #2efc65;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform-origin: 50% 50%;
+    transform: translateX(190px) translateY(190px);
+    transition: all .2s ease-in-out;
+    pointer-events: none;
+
+    &::after{
+      display: block;
+      content: ' ';
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      border-radius: 50%;
+      border: #2efc65 solid 2px;
+      top: -1.5px;
+      left: -1.5px;
+      animation: pulse 1.5s ease-in-out infinite both;
+    }
+}
+
+
+@for $i from 0 through 399{
+  $y: floor($i/20)*20;        //calculates the x and y position according to the pixel number
+  $x: ($i%20)*20;
+  .trigger-#{$i}:hover ~ .follow{
+    transform: translateX($x + px) translateY($y + px);
+  }
+}
+
+@keyframes pulse {
+  0%{
+    opacity: 0;
+    transform: scale(1);
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    transform: scale(2);
+  }
+}
