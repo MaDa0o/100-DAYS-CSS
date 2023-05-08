@@ -1,0 +1,127 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+    background: #33335c;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.counter{
+    background-color: #fff;
+    border-radius: 2px;
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    top: 180px;
+    left: 150px;
+    display: flex;
+    justify-content: space-evenly;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+.thousands,.hundreds,tens,.ones{
+    height: 360px;
+    width: 25px;
+}
+
+.number{
+    height: 40px;
+    font-size: 31px;
+    text-align: center;
+    line-height: 40px;
+    color:#478BB8;
+    font-weight: 500;
+}
+
+.ones{
+    animation: count 10s steps(10) infinite;
+}
+.tens{
+    animation: count 100s steps(10) infinite;
+}
+.hundreds{
+    animation: count 1000s steps(10) infinite;
+}
+.thousands{
+    animation: count 10000s steps(10) infinite;
+}
+
+.btn{
+    width: 30px;
+    height: 30px;
+    /* background-color: #478BB8; */
+    position: absolute;
+    left: 185px;
+    top: 250px;
+    cursor: pointer;
+}
+#chk{
+    display: none;
+}
+
+
+#chk:checked ~ .counter .ones{
+    animation-play-state: paused;
+}
+#chk:checked ~ .counter .tens{
+    animation-play-state: paused;
+}
+#chk:checked ~ .counter .hundreds{
+    animation-play-state: paused;
+}
+#chk:checked ~ .counter .thousands{
+    animation-play-state: paused;
+}
+
+svg{
+    position: absolute;
+    fill: #fff;
+    transition: all .3s ease-in-out;
+}
+
+.bi-play-fill{
+    transform: scale(0);
+}
+.bi-pause-fill{
+    transform: scale(1);
+}
+
+input:checked ~ .btn .bi-play-fill{
+    transform: scale(1);
+}
+input:checked ~ .btn .bi-pause-fill{
+    transform: scale(0);
+}
+
+
+
+@keyframes count {
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(-400px);
+    }
+}
