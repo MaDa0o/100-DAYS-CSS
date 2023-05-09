@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="frame">
+        
+    </div>
+
+    <script>
+        const frame = document.querySelector('.frame')
+
+        for(let i=1;i<=10;i++){
+            addRing(i);
+        }
+
+        function addRing(i){
+            const ring = document.createElement('div')
+            let name = "ring ring-" + i
+
+            frame.appendChild(ring);
+            ring.className = name;
+            for(let j = 1; j<=(12+(i*6));j++){
+                const dot = document.createElement('div')
+                ring.appendChild(dot);
+                dot.className = "dot dot-" + j
+
+                const fill = document.createElement('div')
+                dot.appendChild(fill);
+                fill.className = "fill"
+            }
+        }
+    </script>
+</body>
+</html>
