@@ -1,0 +1,73 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+  overflow: hidden;
+  background: #505f87;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.contain{
+    width: 300px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 3px;
+    position: relative;
+    left: 50px;
+    top: 175px;
+    text-align: center;
+    line-height: 45px;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.3);
+}
+
+#slid{
+    -webkit-appearance: none;       /*used to change the default appearance of element according to the browser so that it can be overwritten webkit is supported by safari firefox and some other browsers*/
+    width: 250px;
+    height: 7px;
+    background-color: #50d862;
+    border-radius: 3px;
+    initial-value: 50;
+    cursor: pointer;
+    border: #3c9c49 solid 1px;
+}
+
+.thumb{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: #50d862 solid 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 12.5px;
+    left: 137.5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    pointer-events: none;
+}
+.line{
+    background-color: #dedbdb;
+    width: 1px;
+    height: 15px;
+}
