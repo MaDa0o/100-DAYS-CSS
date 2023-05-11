@@ -1,0 +1,116 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+:root{
+  --bg: #263A4D;
+  --dark: #406384;
+  --middle: #5D90BF;
+  --light: #7EB3E6;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: var(--bg);
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.wave{
+  position: absolute;
+	height: 150px;
+	width: 500px;
+	left: -50px;
+	background: #fff;
+}
+
+.circle{
+    position: relative;
+		float: left;
+		width: 50px;
+		height: 50px;
+		top: -24px;
+		border-radius: 50px;
+}
+
+.wave-top{
+  top: 225px;
+	background: var(--dark);
+  animation: wave-top 4s ease-in-out alternate infinite;
+}
+.wave-top .circle{
+  background: var(--dark);
+}
+.wave-top .circle:nth-child(2n+2){
+  background: var(--bg);
+}
+
+.wave-middle{
+  top: 280px;
+	background: var(--middle);
+  animation: wave-middle 4s ease-in-out alternate infinite;
+}
+.wave-middle .circle{
+  background: var(--middle);
+}
+.wave-middle .circle:nth-child(2n+2){
+  background: var(--dark);
+}
+
+.wave-bottom{
+  top: 335px;
+	background: var(--light);
+  animation: wave-bottom 4s ease-in-out alternate infinite;
+}
+.wave-bottom .circle{
+  background: var(--light);
+}
+.wave-bottom .circle:nth-child(2n+2){
+  background: var(--middle);
+}
+
+
+@keyframes wave-top {
+	from {
+		transform: translate3d(-20px,0,0);
+	}
+	to {
+		transform: translate3d(20px,0,0);
+	}
+}
+
+@keyframes wave-middle {
+	from {
+		transform: translate3d(10px,0,0);
+	}
+	to {
+		transform: translate3d(-10px,0,0);
+	}
+}
+
+@keyframes wave-bottom {
+	from {
+		transform: translate3d(-50px,0,0);
+	}
+	to {
+		transform: translate3d(50px,0,0);
+	}
+}
