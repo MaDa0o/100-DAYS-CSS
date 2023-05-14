@@ -1,0 +1,203 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+/* // use only the available space inside the 400x400 frame */
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #2c3e50;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icosahedron {
+  height: 280px;
+  width: 160px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  cursor: pointer;
+  position: absolute;
+  top: 60px;
+  left: 120px;
+  transition: all 3s ease-in-out;
+  transform: rotateX(-40deg) rotateY(-40deg);
+}
+
+.icosahedron:hover {
+  transform: rotateX(-400deg) rotateY(-400deg);
+}
+
+.icosahedron:hover .side {
+  opacity: 0.5;
+}
+
+.side {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 80px 138.56px 80px;
+  border-color: transparent transparent #eee transparent;
+  transform-origin: 50% 100%;
+  transition: all 3s ease-in-out;
+}
+
+.side-1 {
+  transform: translateZ(129.2px) rotateZ(90deg) rotateX(159.095deg);
+}
+
+.side-2 {
+  transform: translateZ(129.2px) rotateZ(-90deg) rotateX(159.095deg);
+}
+
+.side-3 {
+  transform: translateZ(-129.2px) rotateZ(90deg) rotateX(-159.095deg);
+}
+
+.side-4 {
+  transform: translateZ(-129.2px) rotateZ(-90deg) rotateX(-159.095deg);
+}
+
+.side-5 {
+  transform: rotateY(-90deg) translateZ(129.2px) rotateX(20.905deg);
+}
+
+.side-6 {
+  transform: rotateY(-90deg) translateZ(129.2px) rotateX(159.095deg);
+}
+
+.side-7 {
+  transform: rotateY(-90deg) translateZ(-129.2px) rotateX(-20.905deg);
+}
+
+.side-8 {
+  transform: rotateY(-90deg) translateZ(-129.2px) rotateX(-159.095deg);
+}
+
+.side-9 {
+  transform: translateY(129.2px) rotateX(69.095deg);
+}
+
+.side-10 {
+  transform: translateY(129.2px) rotateX(-69.095deg);
+}
+
+.side-11 {
+  transform: translateY(-129.2px) rotateX(110.905deg);
+}
+
+.side-12 {
+  transform: translateY(-129.2px) rotateX(-110.905deg);
+}
+
+.side-13 {
+  border-width: 138.56px 80px 0 80px;
+  transform: translateY(-129.2px) translateX(80px) rotateX(-135deg) rotateY(-35.264deg) rotateZ(-8deg);
+}
+
+.side-14 {
+  border-width: 138.56px 80px 0 80px;
+  transform: translateY(-129.2px) translateX(80px) rotateX(135deg) rotateY(35.264deg) rotateZ(-8deg);
+}
+
+.side-15 {
+  border-width: 138.56px 80px 0 80px;
+  transform: translateY(-129.2px) translateX(-80px) rotateX(-135deg) rotateY(35.264deg) rotateZ(8deg);
+}
+
+.side-16 {
+  border-width: 138.56px 80px 0 80px;
+  transform: translateY(-129.2px) translateX(-80px) rotateX(135deg) rotateY(-35.264deg) rotateZ(8deg);
+}
+
+.side-17 {
+  border-width: 138.56px 80px 0 80px;
+  transform: translateY(129.2px) translateX(80px) rotateX(45deg) rotateY(-35.264deg) rotateZ(-8deg);
+}
+
+.side-18 {
+  border-width: 138.56px 80px 0 80px;
+  transform: translateY(129.2px) translateX(80px) rotateX(-45deg) rotateY(35.264deg) rotateZ(-8deg);
+}
+
+.side-19 {
+  border-width: 138.56px 80px 0 80px;
+  transform: translateY(129.2px) translateX(-80px) rotateX(45deg) rotateY(35.264deg) rotateZ(8deg);
+}
+
+.side-20 {
+  border-width: 138.56px 80px 0 80px;
+  transform: translateY(129.2px) translateX(-80px) rotateX(-45deg) rotateY(-35.264deg) rotateZ(8deg);
+}
+
+.side-2 {
+  border-color: transparent transparent #e1e1e1 transparent;
+}
+
+.side-4 {
+  border-color: transparent transparent #e1e1e1 transparent;
+}
+
+.side-6 {
+  border-color: transparent transparent #e1e1e1 transparent;
+}
+
+.side-8 {
+  border-color: transparent transparent #e1e1e1 transparent;
+}
+
+.side-10 {
+  border-color: transparent transparent #e1e1e1 transparent;
+}
+
+.side-12 {
+  border-color: transparent transparent #e1e1e1 transparent;
+}
+
+.side-13 {
+  border-color: #fff transparent transparent transparent;
+}
+
+.side-14 {
+  border-color: #fff transparent transparent transparent;
+}
+
+.side-15 {
+  border-color: #fff transparent transparent transparent;
+}
+
+.side-16 {
+  border-color: #fff transparent transparent transparent;
+}
+
+.side-17 {
+  border-color: #fff transparent transparent transparent;
+}
+
+.side-18 {
+  border-color: #fff transparent transparent transparent;
+}
+
+.side-19 {
+  border-color: #fff transparent transparent transparent;
+}
+
+.side-20 {
+  border-color: #fff transparent transparent transparent;
+}/*# sourceMappingURL=style.css.map */

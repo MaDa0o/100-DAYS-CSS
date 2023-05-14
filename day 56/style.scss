@@ -42,18 +42,18 @@ $leafShadow: -5px -5px 1px 0 rgba(0,0,0,0.06);
 }
 
 .dot {
-		position: absolute;
-		z-index: 5;
-		width: 50px;
-		height: 50px;
-		top: 0;
-		left: 0;
-		background: #f1c40f;
-		border-radius: 50%;
-		opacity: 0.8;
-		transform: scale(0);
-		transition: opacity .5s ease-in-out;
-		animation: dot $speed ease-in-out infinite;
+	position: absolute;
+	z-index: 5;
+	width: 50px;
+	height: 50px;
+	top: 0;
+	left: 0;
+	background: #f1c40f;
+	border-radius: 50%;
+	opacity: 0.8;
+	transform: scale(0);
+	transition: opacity .5s ease-in-out;
+	animation: dot $speed ease-in-out infinite;
 }
 
 .petal {
@@ -86,7 +86,7 @@ $leafShadow: -5px -5px 1px 0 rgba(0,0,0,0.06);
 		0%,100% {
 			transform: rotate( ( $i * $angle )+deg ) translateY(0);
 		}
-		
+		//showing error but compiles correctly :) help
 		#{$percentIn}% {
 			transform: rotate( ( $i * $angle )+deg ) translate(-35px, -35px) scale(2);
 			box-shadow: $leafShadow;
