@@ -1,0 +1,129 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+/* // use only the available space inside the 400x400 frame */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #fff;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.base {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: url(https://i.pinimg.com/564x/75/6b/ae/756bae72a61fd37bf9695d82029a4479.jpg) center center;
+  background-size: cover;
+  cursor: pointer;
+}
+.base:hover .slice {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.base:hover .text h1, .base:hover .text h2 {
+  transform: translateX(80px);
+  opacity: 0;
+}
+.base:hover .text h2 {
+  transform: translateX(-100px);
+  opacity: 0;
+}
+.base .text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 145px;
+}
+.base .text h1, .base .text h2 {
+  font-size: 60px;
+  line-height: 60px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+  transition: all 0.8s ease-in-out;
+  transform: translateX(0);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.base .text h2 {
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.slice {
+  position: relative;
+  width: 50px;
+  height: 400px;
+  background: url(https://i.pinimg.com/564x/b9/c8/17/b9c817571dadc3181a12928e6d9fafb7.jpg) center center no-repeat;
+  float: left;
+  background-size: 400px 400px;
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+}
+
+.slice-1 {
+  background-position: 0px 0px;
+  transform: translateY(-80px);
+}
+
+.slice-2 {
+  background-position: -50px 0px;
+  transform: translateY(-80px);
+}
+
+.slice-3 {
+  background-position: -100px 0px;
+  transform: translateY(-80px);
+}
+
+.slice-4 {
+  background-position: -150px 0px;
+  transform: translateY(-80px);
+}
+
+.slice-5 {
+  background-position: -200px 0px;
+  transform: translateY(-80px);
+}
+
+.slice-6 {
+  background-position: -250px 0px;
+  transform: translateY(-80px);
+}
+
+.slice-7 {
+  background-position: -300px 0px;
+  transform: translateY(-80px);
+}
+
+.slice-8 {
+  background-position: -350px 0px;
+  transform: translateY(-80px);
+}
+
+.slice-2 {
+  transform: translateY(80px);
+}
+
+.slice-4 {
+  transform: translateY(80px);
+}
+
+.slice-6 {
+  transform: translateY(80px);
+}
+
+.slice-8 {
+  transform: translateY(80px);
+}/*# sourceMappingURL=style.css.map */
