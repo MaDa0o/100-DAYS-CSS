@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="frame">
+
+      </div>
+</body>
+
+<script>
+    const base = document.querySelector('.frame');
+
+    for(let i=0;i<=200;i++){
+        addTrigger(i);
+    }
+
+    const plane= document.createElement('div')
+        base.appendChild(plane);
+        plane.className = "plane";
+    const text_back= document.createElement('div')
+        base.appendChild(text_back);
+        text_back.className = "text-back";
+        text_back.innerText = "HOVER"
+        const text_front= document.createElement('div')
+        plane.appendChild(text_front);
+        text_front.className = "text-front";
+        text_front.innerText = "HOVER"
+
+
+    function addTrigger(i){
+        const trigger= document.createElement('div')
+        base.appendChild(trigger);
+        trigger.className = "trigger trigger-" + i;
+    }
+</script>
+</html>

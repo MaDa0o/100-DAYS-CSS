@@ -1,0 +1,88 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+$numberOfTriggers: 200; // update together with html
+$offset: (400 / $numberOfTriggers);
+
+
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #1e2937;
+  color: #ffffff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.trigger {
+	box-sizing: border-box;
+	position: absolute;
+	width: 400px;
+	height: 10px;
+	left: 0;
+	cursor: pointer;
+}
+
+.text-back{
+  position: absolute;
+  width: 400px;
+  pointer-events: none;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 400px;
+}
+
+
+.text-front {
+	@extend .text-back;
+	z-index: 10;
+	color: transparent;
+	text-shadow: 0 0 10px rgba(255,255,255,0.8);
+	transition: all .4s ease-in-out;
+  pointer-events: none;
+}
+
+.plane {
+	position: absolute;
+	z-index: 5;
+	pointer-events: none;
+	width: 400px;
+	height: 200px;
+	top: 0;
+	left: 0;
+	background: #e67e22;
+	overflow: hidden;
+	transform-origin: 50% 0%;
+	transition: all .4s ease-in-out;
+  pointer-events: none;
+}
+
+@for $i from 0 through $numberOfTriggers {
+	.trigger-#{$i} {
+		top: (($i - 1) * $offset)+px;
+	
+		&:hover ~ .plane {
+			$scaleY: ( (1 / $numberOfTriggers) * $i);
+			height: ($i * $offset)+px;
+			transition: initial;
+		}
+	}
+}
