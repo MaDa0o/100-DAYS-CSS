@@ -1,0 +1,43 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.bg{
+  width: 400px;
+  height: 400px;
+  background: rgb(34,193,195);
+  background: linear-gradient(126deg, rgba(34,193,195,1) 0%, rgba(125,132,190,1) 36%, rgba(177,132,172,1) 62%, rgba(253,187,45,1) 100%);
+  background-size: 300%;
+  background-position: left;
+  animation: change 5s linear infinite alternate;
+}
+
+@keyframes change {
+  from{
+    background-position: left;
+  }
+
+  to{
+    background-position: right;
+  }
+  
+}
