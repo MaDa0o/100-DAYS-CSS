@@ -1,0 +1,60 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+$numberofrings:60;
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #31cf7e;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.circle{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: #fff dotted 2px;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  transform-origin: 50% 50%;
+}
+
+@for $i from 1 through $numberofrings{
+  .circle-#{$i}{
+    animation: hypno 10s ease-in-out ($i/-6)+s infinite both;
+  }
+}
+
+@keyframes hypno {
+  from{
+    transform: scale(0) translate(200px,-200px);
+    opacity: 0.4;
+  }
+
+  to{
+    transform: scale(3.5) translate(0px,0px);
+    opacity: 1;
+  }
+}

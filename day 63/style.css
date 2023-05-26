@@ -1,0 +1,289 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+/* // use only the available space inside the 400x400 frame */
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #31cf7e;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: #fff dotted 2px;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  transform-origin: 50% 50%;
+}
+
+.circle-1 {
+  animation: hypno 10s ease-in-out -0.1666666667s infinite both;
+}
+
+.circle-2 {
+  animation: hypno 10s ease-in-out -0.3333333333s infinite both;
+}
+
+.circle-3 {
+  animation: hypno 10s ease-in-out -0.5s infinite both;
+}
+
+.circle-4 {
+  animation: hypno 10s ease-in-out -0.6666666667s infinite both;
+}
+
+.circle-5 {
+  animation: hypno 10s ease-in-out -0.8333333333s infinite both;
+}
+
+.circle-6 {
+  animation: hypno 10s ease-in-out -1s infinite both;
+}
+
+.circle-7 {
+  animation: hypno 10s ease-in-out -1.1666666667s infinite both;
+}
+
+.circle-8 {
+  animation: hypno 10s ease-in-out -1.3333333333s infinite both;
+}
+
+.circle-9 {
+  animation: hypno 10s ease-in-out -1.5s infinite both;
+}
+
+.circle-10 {
+  animation: hypno 10s ease-in-out -1.6666666667s infinite both;
+}
+
+.circle-11 {
+  animation: hypno 10s ease-in-out -1.8333333333s infinite both;
+}
+
+.circle-12 {
+  animation: hypno 10s ease-in-out -2s infinite both;
+}
+
+.circle-13 {
+  animation: hypno 10s ease-in-out -2.1666666667s infinite both;
+}
+
+.circle-14 {
+  animation: hypno 10s ease-in-out -2.3333333333s infinite both;
+}
+
+.circle-15 {
+  animation: hypno 10s ease-in-out -2.5s infinite both;
+}
+
+.circle-16 {
+  animation: hypno 10s ease-in-out -2.6666666667s infinite both;
+}
+
+.circle-17 {
+  animation: hypno 10s ease-in-out -2.8333333333s infinite both;
+}
+
+.circle-18 {
+  animation: hypno 10s ease-in-out -3s infinite both;
+}
+
+.circle-19 {
+  animation: hypno 10s ease-in-out -3.1666666667s infinite both;
+}
+
+.circle-20 {
+  animation: hypno 10s ease-in-out -3.3333333333s infinite both;
+}
+
+.circle-21 {
+  animation: hypno 10s ease-in-out -3.5s infinite both;
+}
+
+.circle-22 {
+  animation: hypno 10s ease-in-out -3.6666666667s infinite both;
+}
+
+.circle-23 {
+  animation: hypno 10s ease-in-out -3.8333333333s infinite both;
+}
+
+.circle-24 {
+  animation: hypno 10s ease-in-out -4s infinite both;
+}
+
+.circle-25 {
+  animation: hypno 10s ease-in-out -4.1666666667s infinite both;
+}
+
+.circle-26 {
+  animation: hypno 10s ease-in-out -4.3333333333s infinite both;
+}
+
+.circle-27 {
+  animation: hypno 10s ease-in-out -4.5s infinite both;
+}
+
+.circle-28 {
+  animation: hypno 10s ease-in-out -4.6666666667s infinite both;
+}
+
+.circle-29 {
+  animation: hypno 10s ease-in-out -4.8333333333s infinite both;
+}
+
+.circle-30 {
+  animation: hypno 10s ease-in-out -5s infinite both;
+}
+
+.circle-31 {
+  animation: hypno 10s ease-in-out -5.1666666667s infinite both;
+}
+
+.circle-32 {
+  animation: hypno 10s ease-in-out -5.3333333333s infinite both;
+}
+
+.circle-33 {
+  animation: hypno 10s ease-in-out -5.5s infinite both;
+}
+
+.circle-34 {
+  animation: hypno 10s ease-in-out -5.6666666667s infinite both;
+}
+
+.circle-35 {
+  animation: hypno 10s ease-in-out -5.8333333333s infinite both;
+}
+
+.circle-36 {
+  animation: hypno 10s ease-in-out -6s infinite both;
+}
+
+.circle-37 {
+  animation: hypno 10s ease-in-out -6.1666666667s infinite both;
+}
+
+.circle-38 {
+  animation: hypno 10s ease-in-out -6.3333333333s infinite both;
+}
+
+.circle-39 {
+  animation: hypno 10s ease-in-out -6.5s infinite both;
+}
+
+.circle-40 {
+  animation: hypno 10s ease-in-out -6.6666666667s infinite both;
+}
+
+.circle-41 {
+  animation: hypno 10s ease-in-out -6.8333333333s infinite both;
+}
+
+.circle-42 {
+  animation: hypno 10s ease-in-out -7s infinite both;
+}
+
+.circle-43 {
+  animation: hypno 10s ease-in-out -7.1666666667s infinite both;
+}
+
+.circle-44 {
+  animation: hypno 10s ease-in-out -7.3333333333s infinite both;
+}
+
+.circle-45 {
+  animation: hypno 10s ease-in-out -7.5s infinite both;
+}
+
+.circle-46 {
+  animation: hypno 10s ease-in-out -7.6666666667s infinite both;
+}
+
+.circle-47 {
+  animation: hypno 10s ease-in-out -7.8333333333s infinite both;
+}
+
+.circle-48 {
+  animation: hypno 10s ease-in-out -8s infinite both;
+}
+
+.circle-49 {
+  animation: hypno 10s ease-in-out -8.1666666667s infinite both;
+}
+
+.circle-50 {
+  animation: hypno 10s ease-in-out -8.3333333333s infinite both;
+}
+
+.circle-51 {
+  animation: hypno 10s ease-in-out -8.5s infinite both;
+}
+
+.circle-52 {
+  animation: hypno 10s ease-in-out -8.6666666667s infinite both;
+}
+
+.circle-53 {
+  animation: hypno 10s ease-in-out -8.8333333333s infinite both;
+}
+
+.circle-54 {
+  animation: hypno 10s ease-in-out -9s infinite both;
+}
+
+.circle-55 {
+  animation: hypno 10s ease-in-out -9.1666666667s infinite both;
+}
+
+.circle-56 {
+  animation: hypno 10s ease-in-out -9.3333333333s infinite both;
+}
+
+.circle-57 {
+  animation: hypno 10s ease-in-out -9.5s infinite both;
+}
+
+.circle-58 {
+  animation: hypno 10s ease-in-out -9.6666666667s infinite both;
+}
+
+.circle-59 {
+  animation: hypno 10s ease-in-out -9.8333333333s infinite both;
+}
+
+.circle-60 {
+  animation: hypno 10s ease-in-out -10s infinite both;
+}
+
+@keyframes hypno {
+  from {
+    transform: scale(0) translate(200px, -200px);
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(3.5) translate(0px, 0px);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=style.css.map */
