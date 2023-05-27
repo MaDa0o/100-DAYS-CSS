@@ -1,0 +1,77 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+$radius:150;
+$closingFactor:0.6;
+$numberOfEllipses:18;
+
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #349ea0;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.base{
+  width: 300px;
+  height: 300px;
+  top: 50px;
+  left: 50px;
+  position: absolute;
+}
+
+.ellipse{
+
+  position: absolute;
+  top: 0px;
+  left: ( ($radius - ($radius * $closingFactor) / 2))+px;
+	width: ($radius * $closingFactor)+px;
+	height: ($radius * 2)+px;
+  border: #fff solid 1px;
+  border-radius: 50%;
+}
+
+@for $i from 1 through $numberOfEllipses {
+	$nullBase: $i - 1;
+	$degree: (180 / $numberOfEllipses) * $nullBase;
+	.ellipse-#{$i} {
+		animation: ellipse-#{$i} 5s ease-in-out infinite;
+	}
+
+  @keyframes ellipse-#{$i} {
+		0% {
+			transform: rotate( ($degree)+deg );
+			border-radius: 50%;
+			border-width: 1px;
+		}
+		50% {
+			transform: rotate(0) scaleX(2 / $closingFactor);
+			border-radius: 0%;;
+		}
+		100% {
+			transform: rotate( ( -1 * $degree)+deg );
+			border-radius: 50%;
+			border-width: 1px;
+		}
+	}
+
+}
