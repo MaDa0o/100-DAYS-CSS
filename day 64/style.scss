@@ -1,0 +1,68 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #252d41;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.btn-cont{
+  position: absolute;
+  width: 190px;
+  height: 70px;
+  // background-color: aqua;
+  top: 165px;
+  left: 105px;
+  cursor: pointer;
+  
+  .btn{
+    position: absolute;
+    width: 180px;
+    height: 60px;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.3);
+  }
+  .behind{
+    background-color: #750dca;
+    bottom: 0px;
+    right: 0px;
+  }
+  .front{
+    background-color: #fff;
+    top: 0px;
+    left: 0px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 60px;
+  }
+
+  &:hover{
+    .front{
+      top: 10px;
+      left: 10px;
+      background-color: #750dca;
+      color: #fff;
+    }
+
+    .behind{
+      background-color: #fff;
+      bottom: 10px;
+      right: 10px;
+    }
+  }
+}
