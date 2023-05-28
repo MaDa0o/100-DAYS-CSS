@@ -1,0 +1,193 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+/* // use only the available space inside the 400x400 frame */
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #595d6b;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#chk {
+  display: none;
+}
+
+.circle {
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: #fff solid 2px;
+  position: absolute;
+  top: 180px;
+  left: 180px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: none;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+#chk:checked ~ .circle {
+  border-width: 13px;
+  background-color: #41ba45;
+}
+#chk:checked ~ .sparkles .sparkle-1 {
+  transform: rotate(0deg) translateY(-50px) scaleY(1);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+#chk:checked ~ .sparkles .sparkle-2 {
+  transform: rotate(30deg) translateY(-50px) scaleY(1);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+#chk:checked ~ .sparkles .sparkle-3 {
+  transform: rotate(60deg) translateY(-50px) scaleY(1);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+#chk:checked ~ .sparkles .sparkle-4 {
+  transform: rotate(90deg) translateY(-50px) scaleY(1);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+#chk:checked ~ .sparkles .sparkle-5 {
+  transform: rotate(120deg) translateY(-50px) scaleY(1);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+#chk:checked ~ .sparkles .sparkle-6 {
+  transform: rotate(150deg) translateY(-50px) scaleY(1);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+#chk:checked ~ .sparkles .sparkle-7 {
+  transform: rotate(180deg) translateY(-50px) scaleY(1);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+#chk:checked ~ .sparkles .sparkle-8 {
+  transform: rotate(210deg) translateY(-50px) scaleY(1);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+#chk:checked ~ .sparkles .sparkle-9 {
+  transform: rotate(240deg) translateY(-50px) scaleY(1);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+#chk:checked ~ .sparkles .sparkle-10 {
+  transform: rotate(270deg) translateY(-50px) scaleY(1);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+#chk:checked ~ .sparkles .sparkle-11 {
+  transform: rotate(300deg) translateY(-50px) scaleY(1);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+#chk:checked ~ .sparkles .sparkle-12 {
+  transform: rotate(330deg) translateY(-50px) scaleY(1);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.sparkle {
+  width: 2px;
+  height: 16px;
+  position: absolute;
+  background-color: #fff;
+  top: 0px;
+  left: 19px;
+  transform-origin: 50% 100%;
+  opacity: 1;
+  z-index: 1;
+}
+
+.sparkles {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 180px;
+  left: 180px;
+  pointer-events: none;
+}
+.sparkles .sparkle-1 {
+  transform: rotate(0deg) translateY(-15px) scaleY(0);
+  opacity: 1;
+  transition: none;
+}
+.sparkles .sparkle-2 {
+  transform: rotate(30deg) translateY(-15px) scaleY(0);
+  opacity: 1;
+  transition: none;
+}
+.sparkles .sparkle-3 {
+  transform: rotate(60deg) translateY(-15px) scaleY(0);
+  opacity: 1;
+  transition: none;
+}
+.sparkles .sparkle-4 {
+  transform: rotate(90deg) translateY(-15px) scaleY(0);
+  opacity: 1;
+  transition: none;
+}
+.sparkles .sparkle-5 {
+  transform: rotate(120deg) translateY(-15px) scaleY(0);
+  opacity: 1;
+  transition: none;
+}
+.sparkles .sparkle-6 {
+  transform: rotate(150deg) translateY(-15px) scaleY(0);
+  opacity: 1;
+  transition: none;
+}
+.sparkles .sparkle-7 {
+  transform: rotate(180deg) translateY(-15px) scaleY(0);
+  opacity: 1;
+  transition: none;
+}
+.sparkles .sparkle-8 {
+  transform: rotate(210deg) translateY(-15px) scaleY(0);
+  opacity: 1;
+  transition: none;
+}
+.sparkles .sparkle-9 {
+  transform: rotate(240deg) translateY(-15px) scaleY(0);
+  opacity: 1;
+  transition: none;
+}
+.sparkles .sparkle-10 {
+  transform: rotate(270deg) translateY(-15px) scaleY(0);
+  opacity: 1;
+  transition: none;
+}
+.sparkles .sparkle-11 {
+  transform: rotate(300deg) translateY(-15px) scaleY(0);
+  opacity: 1;
+  transition: none;
+}
+.sparkles .sparkle-12 {
+  transform: rotate(330deg) translateY(-15px) scaleY(0);
+  opacity: 1;
+  transition: none;
+}/*# sourceMappingURL=style.css.map */
