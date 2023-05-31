@@ -1,0 +1,109 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #2d3a4d;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.eye{
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: 120px;
+  left: 120px;
+  background-color: #fff;
+  border-radius: 100% 0px;
+  transform: rotate(45deg);
+  overflow: hidden;
+  box-shadow: inset 4px 8px 16px 0 rgba(0,0,0,0.5);
+}
+
+.eyeball{
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-image: url(https://w7.pngwing.com/pngs/363/902/png-transparent-sharingan-eyes-illustration-uchiha-clan-sasuke-uchiha-obito-uchiha-apple-you-beauty-style-sharingan-smiley-emoticon-akatsuki.png);
+  background-size: 238px;
+  background-position: 49% 49%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  animation: ball 6s ease-in-out infinite;
+}
+
+.lid{
+  fill: #2d3a4d;
+  stroke: none;
+  width: 300px;
+}
+
+.lid-1{
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  left: 30px;
+  top: 150px;
+  transform: translateY(-60px);
+  animation: blink-1 6s ease-in-out  infinite both;
+}
+.lid-2{
+  position: absolute;
+  width: 350px;
+  height: 100px;
+  left: 30px;
+  bottom: 150px;
+  transform: translateY(60px) rotate(180deg);
+  animation: blink-2 6s ease-in-out infinite;
+}
+
+@keyframes blink-1 {
+	10%,17%, 25%,33%, 47%,55%, 75%, 83% {
+		transform: translateY(-80px);
+	}
+	0%,5%,21%,29%, 51%, 81%,90%,100% {
+		transform: translateY(0);
+	}
+}
+@keyframes blink-2 {
+	10%,17%, 25%,33%, 47%,55%, 75%, 83% {
+		transform: translateY(80px)rotate(180deg);
+	}
+	0%,5%,21%,29%, 51%, 81%,90%,100% {
+		transform: translateY(0) rotate(180deg);
+	}
+}
+
+@keyframes ball {
+  0%,5%{
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0);
+    transform: rotate(0deg) translateX(0) scale(1.2);
+  }
+	20%, 66% {
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0);
+		transform: rotate(-405deg) translateX(0) scale(1);
+	}
+	28%, 40% {
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.5);
+    transform: rotate(-405deg) translate(-25px, 5px) scale(0.9);
+	}
+	44%, 62% {
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.5);
+		transform: rotate(-405deg) translate(25px, 10px) scale(0.9);
+	}
+}
