@@ -1,0 +1,272 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+/* // use only the available space inside the 400x400 frame */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #2e93f1;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  border-radius: 50%;
+  border: #fff solid 1px;
+}
+
+.circle-1 {
+  animation: rotate-1 8s ease-in-out infinite;
+}
+
+@keyframes rotate-1 {
+  2% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(-360deg);
+  }
+}
+.circle-2 {
+  animation: rotate-2 8s ease-in-out infinite;
+}
+
+@keyframes rotate-2 {
+  4% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(-360deg);
+  }
+}
+.circle-3 {
+  animation: rotate-3 8s ease-in-out infinite;
+}
+
+@keyframes rotate-3 {
+  6% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(-360deg);
+  }
+}
+.circle-4 {
+  animation: rotate-4 8s ease-in-out infinite;
+}
+
+@keyframes rotate-4 {
+  8% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(-360deg);
+  }
+}
+.circle-5 {
+  animation: rotate-5 8s ease-in-out infinite;
+}
+
+@keyframes rotate-5 {
+  10% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(-360deg);
+  }
+}
+.circle-6 {
+  animation: rotate-6 8s ease-in-out infinite;
+}
+
+@keyframes rotate-6 {
+  12% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(-360deg);
+  }
+}
+.circle-7 {
+  animation: rotate-7 8s ease-in-out infinite;
+}
+
+@keyframes rotate-7 {
+  14% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(-360deg);
+  }
+}
+.circle-8 {
+  animation: rotate-8 8s ease-in-out infinite;
+}
+
+@keyframes rotate-8 {
+  16% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(-360deg);
+  }
+}
+.circle-9 {
+  animation: rotate-9 8s ease-in-out infinite;
+}
+
+@keyframes rotate-9 {
+  18% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(-360deg);
+  }
+}
+.circle-10 {
+  animation: rotate-10 8s ease-in-out infinite;
+}
+
+@keyframes rotate-10 {
+  20% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(-360deg);
+  }
+}
+.circle-11 {
+  animation: rotate-11 8s ease-in-out infinite;
+}
+
+@keyframes rotate-11 {
+  22% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(-360deg);
+  }
+}
+.circle-12 {
+  animation: rotate-12 8s ease-in-out infinite;
+}
+
+@keyframes rotate-12 {
+  24% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(-360deg);
+  }
+}
+.circle-13 {
+  animation: rotate-13 8s ease-in-out infinite;
+}
+
+@keyframes rotate-13 {
+  26% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(-360deg);
+  }
+}
+.circle-14 {
+  animation: rotate-14 8s ease-in-out infinite;
+}
+
+@keyframes rotate-14 {
+  28% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(-360deg);
+  }
+}
+.circle-15 {
+  animation: rotate-15 8s ease-in-out infinite;
+}
+
+@keyframes rotate-15 {
+  30% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(-360deg);
+  }
+}
+.circle-16 {
+  animation: rotate-16 8s ease-in-out infinite;
+}
+
+@keyframes rotate-16 {
+  32% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(-360deg);
+  }
+}
+.circle-17 {
+  animation: rotate-17 8s ease-in-out infinite;
+}
+
+@keyframes rotate-17 {
+  34% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(-360deg);
+  }
+}
+.circle-18 {
+  animation: rotate-18 8s ease-in-out infinite;
+}
+
+@keyframes rotate-18 {
+  36% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(-360deg);
+  }
+}
+.circle-19 {
+  animation: rotate-19 8s ease-in-out infinite;
+}
+
+@keyframes rotate-19 {
+  38% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(-360deg);
+  }
+}
+.circle-20 {
+  animation: rotate-20 8s ease-in-out infinite;
+}
+
+@keyframes rotate-20 {
+  40% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(-360deg);
+  }
+}/*# sourceMappingURL=style.css.map */
