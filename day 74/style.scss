@@ -1,0 +1,85 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #40f8f5;
+  color: #fff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  z-index: 0;
+}
+
+
+.trigger{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: #fff solid 2px;
+  position: absolute;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+  top: 185px;
+  left: 185px;
+  cursor: pointer;
+  background: none;
+  transition: all .3s ease-in-out;
+  z-index: 4;
+
+  .fill{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+    transform-origin: 50% 50%;
+    z-index: -282;
+    transform: scale(0);
+    transition: all .3s ease-in-out;
+  }
+
+  &:hover{
+    background: #36a4a2;
+  }
+
+  
+}
+.pg{
+  display: none;
+}
+.t1{
+  transform: translateX(-105px);
+}
+.t2{
+  transform: translateX(-35px);
+}
+.t3{
+  transform: translateX(35px);
+}
+.t4{
+  transform: translateX(105px);
+}
+
+@for $i from 1 through 4{
+  #page-#{$i}:checked ~ .t#{$i}{
+    color: #40f8f5;
+    .fill{
+      transform: scale(1);
+    }
+  }
+}
