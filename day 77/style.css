@@ -1,0 +1,145 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+/* // use only the available space inside the 400x400 frame */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #bc2970;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 175px;
+  left: 175px;
+  background-color: #fff;
+  animation: ball 2s ease-in-out infinite;
+}
+
+.blur {
+  position: absolute;
+  border-radius: 50%;
+  background: #fff;
+  width: 50px;
+  aspect-ratio: 1;
+}
+
+.blur-1 {
+  opacity: 0.2;
+  animation: blur-1 2s ease-in-out infinite;
+}
+
+@keyframes blur-1 {
+  0%, 50%, 100% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+.blur-2 {
+  opacity: 0.1666666667;
+  animation: blur-2 2s ease-in-out infinite;
+}
+
+@keyframes blur-2 {
+  0%, 50%, 100% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+.blur-3 {
+  opacity: 0.1428571429;
+  animation: blur-3 2s ease-in-out infinite;
+}
+
+@keyframes blur-3 {
+  0%, 50%, 100% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(-15px);
+  }
+  75% {
+    transform: translateX(15px);
+  }
+}
+.blur-4 {
+  opacity: 0.125;
+  animation: blur-4 2s ease-in-out infinite;
+}
+
+@keyframes blur-4 {
+  0%, 50%, 100% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(-20px);
+  }
+  75% {
+    transform: translateX(20px);
+  }
+}
+.blur-5 {
+  opacity: 0.1111111111;
+  animation: blur-5 2s ease-in-out infinite;
+}
+
+@keyframes blur-5 {
+  0%, 50%, 100% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(-25px);
+  }
+  75% {
+    transform: translateX(25px);
+  }
+}
+.blur-6 {
+  opacity: 0.1;
+  animation: blur-6 2s ease-in-out infinite;
+}
+
+@keyframes blur-6 {
+  0%, 50%, 100% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(-30px);
+  }
+  75% {
+    transform: translateX(30px);
+  }
+}
+@keyframes ball {
+  0%, 100% {
+    transform: translateX(-150px);
+  }
+  50% {
+    transform: translateX(150px);
+  }
+}/*# sourceMappingURL=style.css.map */
