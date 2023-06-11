@@ -1,0 +1,58 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  display: flex;
+}
+
+.box{
+  flex-basis: 100px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  overflow: hidden;
+  position: relative;
+
+  .text{
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: capitalize;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);  
+    transition: all .3s ease-in-out;  
+    opacity: 0;
+  }
+
+  &:hover{
+    flex-basis: 300px;
+    .text{
+      transform: translate(-50%,-50%) scale(1);
+      opacity: 1;
+    }
+  }
+}
+.light{
+  background-color: #f7682f;
+}
+.dark{
+  background-color: #2d374c;
+}

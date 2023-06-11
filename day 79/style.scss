@@ -39,6 +39,8 @@ $numberOfLines: 10;
   background-color: #fff;  
 }
 
+//credits:https://codepen.io/roydigerhund/pen/aNjror
+
 @for $i from 1 through $numberOfLines {
 	$nullBase: $i - 1;
 	$degree: 360 / $numberOfLines;
