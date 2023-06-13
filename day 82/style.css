@@ -1,0 +1,86 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #83d7ce;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+#chk{
+  display: none;
+}
+
+.card{
+  width: 100px;
+  height: 50px;
+  transform-style: preserve-3d;
+  perspective: 200px;
+  position: absolute;
+  border-radius: 30px;
+  top: 175px;
+  left: 150px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  box-shadow: 0px 4px 10px 0px #3a3a3a;
+  display: block;
+}
+
+.front{
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 20px;
+  color: #232d3a;
+  font-weight: 600;
+  line-height: 50px;
+  pointer-events: none;
+  backface-visibility: hidden;
+  display: block;
+}
+.back{
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  background-color: #2ccf4d;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+  line-height: 50px;
+  pointer-events: none;
+  border: #fff solid 2px;
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
+  display: block;
+}
+
+#chk:checked ~ .card{
+  transform: rotateX(180deg);
+  box-shadow: 0px -4px 10px 0px #3a3a3a;
+}
