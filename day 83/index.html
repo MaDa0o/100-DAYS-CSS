@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="frame">
+        
+      </div>
+
+      <script>
+        const frame = document.querySelector('.frame')
+
+        const warp = document.createElement('div')
+        frame.appendChild(warp)
+        warp.className = 'warp'
+        for(let i = 1;i <= 30;i++ ){
+            addring(i)
+        }
+
+        function addring(i){
+            const ring = document.createElement('div')
+            warp.appendChild(ring);
+            ring.className = 'ring ring-' + i;
+            for(let e = 1; e <= 24;e++){
+                addline(e);
+            }
+            function addline(e){
+                const line = document.createElement('div')
+                ring.appendChild(line);
+                line.className = 'line line-' + e;
+            }
+        }
+        </script>
+</body>
+</html>
