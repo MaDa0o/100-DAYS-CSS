@@ -1,0 +1,67 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+$numberOfDots:200;
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #944de5;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.wave{
+  width: 400px;
+  height: 2px;
+  position: absolute;
+  top: 199px;
+  left: 0px;
+}
+
+.dot{
+  background-color: #fff;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  float: left;
+}
+
+@for $i from 1 through $numberOfDots{
+  $offset:0px;
+  @if $i <= 100{
+    $offset: ($i*$i)/100;
+  }@else{
+    $offset: ((200 - $i)*(200 - $i))/100;
+  }
+
+  .dot-#{$i}{
+    animation: move-#{$i} 2s ease-in-out infinite;
+  }
+  
+  @keyframes move-#{$i} {
+    0%,100%{
+      transform: translateY(($offset) + px);
+    }
+    50%{
+      transform: translateY(-($offset) + px);
+    }
+  }
+}
