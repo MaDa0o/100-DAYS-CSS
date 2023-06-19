@@ -1,0 +1,114 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #445174;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.candle{
+  width: 50px;
+  height: 100px;
+  background-color: #fff;
+  position: absolute;
+  top: 150px;
+  left: 175px;
+  border-radius: 3px;
+  overflow: hidden;
+
+  &::after{
+    display: block;
+    content: '';
+    width: 8px;
+    height: 100px;
+    position: absolute;
+    background-color: #dad0fd;
+    filter: blur(2px);
+  }
+  &::before{
+    display: block;
+    content: '';
+    width: 10px;
+    left: 8px;
+    height: 100px;
+    position: absolute;
+    background-color: #e7e7fb;
+    filter: blur(2px);
+  }
+}
+
+.wick{
+  width: 4px;
+  height: 16px;
+  background-color: #c7c0c0;
+  position: absolute;
+  left: 198px;
+  top: 134px;
+}
+
+.floor{
+  width: 100px;
+  height: 10px;
+  background-color: #293452;
+  border-radius: 3px;
+  position: absolute;
+  left: 150px;
+  top: 250px;
+}
+
+.flame {
+  position: absolute;
+  width: 16px;
+  height: 26px;
+  top: 115px;
+  left: 192px;
+  background: #FFAD00;
+  border-radius: 8px 8px 8px 8px / 20px 20px 8px 8px;
+  animation: 
+    wind 15s ease-in-out infinite, 
+    size 20s ease-in-out infinite, 
+    flickr 5s ease-in-out infinite;
+  transform-origin: 50% 100%;
+}
+
+@keyframes wind {
+	0%, 22%, 49%, 62%, 81%, 100% {
+		border-radius: 2px 14px 8px 8px / 20px 20px 8px 8px;
+	}
+	14%, 32%, 56%, 70%, 89% {
+		border-radius: 14px 2px 8px 8px / 20px 20px 8px 8px;
+	}
+}
+
+@keyframes size {
+	0%, 22%, 49%, 62%, 81%, 100% {
+		transform: scale(1,1);
+	}
+	14%, 32%, 56%, 70%, 89% {
+		transform: scale(0.9, 1.2);
+	}
+}
+
+@keyframes flickr {
+	0%, 22%, 49%, 62%, 81%, 100% {
+		box-shadow: 0 0 20px 0 rgba(255,202,0,0.7);
+	}
+	14%, 32%, 56%, 70%, 89% {
+		box-shadow: 0 0 20px 0 rgba(255,202,0,.8);
+	}
+}
