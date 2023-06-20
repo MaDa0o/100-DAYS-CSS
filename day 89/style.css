@@ -1,0 +1,96 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+
+*{
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #64e8a8;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  display: grid;
+  grid-template-rows: repeat(10,1fr);
+  grid-template-columns: repeat(10,1fr);
+}
+
+.box{
+  width: 40px;
+  height: 40px;
+  position:relative;
+}
+.stripe{
+  width: 40px;
+  height: 10px;
+  background-color: #fff;
+  transform-origin: 50% 50%;
+  position: absolute;
+  left: 0px;
+  top: 15px;
+}
+.hori{
+  animation: h 4s ease-in-out infinite;
+}
+.verti{
+  transform:rotate(90deg);
+  animation: v 4s ease-in-out infinite;
+}
+
+@keyframes h {
+	0% {
+		transform: rotate(0);
+	}
+	20% {
+		transform: rotate(45deg);
+	}
+	40% {
+		transform: rotate(45deg) translateY(-20px);
+	}
+	60% {
+		transform: rotate(45deg) scaleY(2) scaleX(.5);
+	}
+	80% {
+		transform: rotate(45deg) scaleY(2) scaleX(.5);
+	}
+	100% {
+		transform: rotate(90deg);
+	}
+}
+
+@keyframes v {
+	0% {
+		transform: rotate(90deg);
+	}
+	20% {
+		transform: rotate(135deg);
+	}
+	40% {
+		transform: rotate(135deg) translateX(10px);
+	}
+	60% {
+		transform: rotate(135deg) scaleY(2) scaleX(.5);
+	}
+	80% {
+		transform: rotate(180deg) scaleY(2) scaleX(.5);
+	}
+	100% {
+		transform: rotate(180deg);
+	}
+}
