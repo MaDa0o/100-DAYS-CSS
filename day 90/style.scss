@@ -1,0 +1,143 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+
+$mouseSize:40;
+
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: url(https://i.pinimg.com/564x/42/56/46/42564631c99dbd03cae9c61001b8d6dc.jpg);
+  background-size: contain;
+  background-position: 45px;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    display: grid;
+    grid-template-columns: repeat(20,1fr);
+    grid-template-rows: repeat(20,1fr);
+}
+
+.trigger{
+    width: 20px;
+    height: 20px;
+    cursor: none;
+}
+
+.follow{
+    width: $mouseSize + px;
+    height: $mouseSize + px;
+    border-radius: 50%;
+    background: url(https://i.pinimg.com/564x/c8/63/82/c863826cd56e1ade9032c79398fe2a81.jpg);
+    background-size: 60px;
+    background-position: -10px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform-origin: 50% 50%;
+    transform: translateX(180px) translateY(180px);
+    transition: all 0.08s ease-in-out;
+    pointer-events: none;
+
+}
+
+.linebox{
+  width: 400px;
+  height: 20px;
+  position: absolute;
+  left: 0px;
+  pointer-events: none;
+  .line{
+    position: absolute;
+    background-color: #fff;
+    width: 400px;
+    height: 2px;
+    top: 9px;
+    left: 0px;
+    pointer-events: none;
+    transition: all .2s ease-in-out;
+  }
+  .left{
+    transform: translateX(-400px);
+  }
+  .right{
+    transform: translateX(400px);
+  }
+}
+
+@for $i from 0 through 19{
+  .linebox-#{$i}{
+    top: ($i * 20) + px;
+  }
+}
+
+
+@for $i from 0 through 399{
+ $y: floor($i/20)*20 - $mouseSize/4;        //calculates the x and y position according to the pixel number
+  $x: ($i%20)*20 - $mouseSize/4;
+  .trigger-#{$i}:hover ~ .follow{
+    transform: translateX($x + px) translateY($y + px);
+  }
+  $boxY: floor($i/20);
+  .trigger-#{$i}:hover{
+    & ~ .linebox-#{$boxY}{
+    & .left{
+      transform: translateX(($x - 400 - 40) + px);
+    }
+    & .right{
+      transform: translateX(($x + 70) + px);
+    }
+  }
+    & ~ .linebox-#{$boxY - 1}{
+    & .left{
+      transform: translateX(($x - 400 - 10) + px);
+    }
+    & .right{
+      transform: translateX(($x + 40) + px);
+    }
+  }
+    & ~ .linebox-#{$boxY - 2}{
+    & .left{
+      transform: translateX(($x - 400) + px);
+    }
+    & .right{
+      transform: translateX(($x + 20) + px);
+    }
+  }
+    & ~ .linebox-#{$boxY + 1}{
+    & .left{
+      transform: translateX(($x - 400 - 10) + px);
+    }
+    & .right{
+      transform: translateX(($x + 40) + px);
+    }
+  }
+    & ~ .linebox-#{$boxY + 2}{
+    & .left{
+      transform: translateX(($x - 400) + px);
+    }
+    & .right{
+      transform: translateX(($x + 20) + px);
+    }
+  }
+  }
+}
+
+

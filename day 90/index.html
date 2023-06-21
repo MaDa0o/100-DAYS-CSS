@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="frame">
+        
+      </div>
+
+      <script>
+        const contain = document.querySelector('.frame');
+
+for(let i=0;i<400;i++){
+    let name = "trigger trigger-" + i;
+    const pix = document.createElement('div')
+    contain.appendChild(pix);
+    pix.className = name;
+}
+
+const foll = document.createElement('div')
+contain.appendChild(foll)
+foll.className="follow"
+
+for(let i = 0;i<20;i++){
+    addline(i);
+}
+
+function addline(i){
+    const linebox = document.createElement('div')
+    contain.appendChild(linebox);
+    linebox.className = 'linebox linebox-' + i;
+    const left = document.createElement('div')
+    const right = document.createElement('div')
+    linebox.appendChild(left)
+    linebox.appendChild(right)
+    left.className = 'line left'
+    right.className = 'line right'
+}
+      </script>
+</body>
+</html>
