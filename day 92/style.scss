@@ -1,0 +1,188 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #40c764;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.ball{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 195px;
+  left: 195px;
+}
+
+@for $i from 1 through 8 {
+	.ball-#{$i} {
+		animation: ball-#{$i} 6s linear infinite;
+	}
+}
+
+@for $i from 9 through 16 {
+	.ball-#{$i} {
+		animation: ball-#{$i} 3.5s linear infinite;
+	}
+}
+
+@keyframes ball-1 {
+	0%, 100% {
+		transform: translate(-195px,-195px);
+	}
+	50% {
+		transform: translate(0,195px);
+	}
+}
+
+@keyframes ball-2 {
+	0%, 100% {
+		transform: translate(195px,-195px);
+	}
+	50% {
+		transform: translate(0,195px);
+	}
+}
+
+@keyframes ball-3 {
+	0%, 100% {
+		transform: translate(195px,195px);
+	}
+	50% {
+		transform: translate(0,-195px);
+	}
+}
+
+@keyframes ball-4 {
+	0%, 100% {
+		transform: translate(-195px,195px);
+	}
+	50% {
+		transform: translate(0,-195px);
+	}
+}
+
+@keyframes ball-5 {
+	0%, 100% {
+		transform: translate(-195px,-195px);
+	}
+	50% {
+		transform: translate(195px,0);
+	}
+}
+
+@keyframes ball-6 {
+	0%, 100% {
+		transform: translate(195px,-195px);
+	}
+	50% {
+		transform: translate(-195px,0);
+	}
+}
+
+@keyframes ball-7 {
+	0%, 100% {
+		transform: translate(195px,195px);
+	}
+	50% {
+		transform: translate(-195px,0);
+	}
+}
+
+@keyframes ball-8 {
+	0%, 100% {
+		transform: translate(-195px,195px);
+	}
+	50% {
+		transform: translate(195px,0);
+	}
+}
+
+@keyframes ball-9 {
+	0%, 100% {
+		transform: translate(0,-195px);
+	}
+	50% {
+		transform: translate(195px,0);
+	}
+}
+
+@keyframes ball-10 {
+	0%, 100% {
+		transform: translate(0,195px);
+	}
+	50% {
+		transform: translate(195px,0);
+	}
+}
+
+@keyframes ball-11 {
+	0%, 100% {
+		transform: translate(0,-195px);
+	}
+	50% {
+		transform: translate(-195px,0);
+	}
+}
+
+@keyframes ball-12 {
+	0%, 100% {
+		transform: translate(0,195px);
+	}
+	50% {
+		transform: translate(-195px,0);
+	}
+}
+
+@keyframes ball-13 {
+	0%, 100% {
+		transform: translate(195px,0);
+	}
+	50% {
+		transform: translate(0,195px);
+	}
+}
+
+@keyframes ball-14 {
+	0%, 100% {
+		transform: translate(-195px,0);
+	}
+	50% {
+		transform: translate(0,195px);
+	}
+}
+
+@keyframes ball-15 {
+	0%, 100% {
+		transform: translate(195px,0);
+	}
+	50% {
+		transform: translate(0,-195px);
+	}
+}
+
+@keyframes ball-16 {
+	0%, 100% {
+		transform: translate(-195px,0);
+	}
+	50% {
+		transform: translate(0,-195px);
+	}
+}
