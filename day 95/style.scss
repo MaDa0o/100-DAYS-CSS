@@ -1,0 +1,138 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #acf35b;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.pig{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  .head{
+    width: 150px;
+    height: 150px;
+    background-color: #ff81f0;
+    border-radius: 50%;
+
+    .eye{
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      position: absolute;
+      border-radius: 50%;
+      top: 50px;
+      animation: eyes 10s ease-in-out infinite;
+
+      &-l{
+        left: 30px;
+      }
+      &-r{
+        right: 30px;
+      }
+      .pupil{
+        width: 6px;
+        height: 6px;
+        background-color: #242323;
+        border-radius: 50%;
+        position: absolute;
+        left: 7px;
+        top: 7px;
+        animation: pupills 10s ease-in-out infinite;
+      }
+    }
+
+    .nose{
+      width: 60px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #fbb9f3;
+      position: absolute;
+      left: 45px;
+      top: 70px;
+      
+      .nostril{
+        width: 10px;
+        height: 10px;
+        background-color: #9b5593;
+        border-radius: 50%;
+        position: absolute;
+        animation: nose 10s ease-in-out infinite;
+        top: 15px;
+        &-l{
+          left: 15px;
+        }
+        &-r{
+          right: 15px;
+        }
+      }
+    }
+  }
+
+  .ear{
+      width: 30px;
+      height: 30px;
+      background-color: #fbb9f3;
+      border: #ff81f0 6px solid;
+      border-radius: 5px;
+      position: absolute;
+      z-index: -1;
+
+      &-l{
+          top: 0px;
+          left: 0px;
+          transform: translate(5px,5px);
+        }
+        &-r{
+          top: 0px;
+          right: 0px;
+          transform: translate(-5px,5px);
+      }
+  }
+
+}
+
+@keyframes eyes {
+	0%, 23%, 25%, 65%, 67%, 89%, 91%, 100%  {
+		transform: scaleY(1);
+	}
+	24%, 66%, 90% {
+		transform: scaleY(0);
+	}
+}
+
+@keyframes pupills {
+	0%, 23%, 25%, 65%, 67%, 89%, 91%, 100%  {
+		transform: scaleY(1);
+	}
+	24%, 66%, 90% {
+		transform: scaleY(2);
+	}
+}
+@keyframes nose {
+	0%, 33%, 35%, 60%, 62%, 89%, 91%, 100%  {
+		transform: scale(1);
+	}
+	34%, 61%, 90% {
+		transform: scale(1.2);
+	}
+}
+
