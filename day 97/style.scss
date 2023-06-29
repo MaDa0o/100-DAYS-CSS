@@ -1,0 +1,119 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #9036a7;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.puppet{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  .body{
+    width: 65px;
+    height: 110px;
+    background-color: #fff;
+    border-radius: 4px;
+  }
+  .head{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    left: 12.5px;
+    top: -50px;
+  }
+
+  .leg{
+    width: 30px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 20px;
+    position: absolute;
+
+    &-l{
+      top: 90px;
+      left: 0px;
+    }
+    &-r{
+      top: 90px;
+      right: 0px;
+    }
+  }
+  
+  .arm{
+    transform-origin: 50% 10PX;
+    position: absolute;
+
+    &-l{
+      top: 0px;
+      left: -10px;
+      transform: rotate(30deg);
+      .lower{
+        transform: rotate(-60deg);
+      }
+    }
+    &-r{
+      top: 0px;
+      right: -10px;
+      animation: move_up 2s ease-in-out infinite; 
+      .lower{
+        animation: move_low 2s ease-in-out infinite;
+      }    
+    }
+
+    .upper{
+      position: relative;
+      width: 20px;
+      height: 60px;
+      background-color: #fff;
+      border-radius: 10px;
+      transform-origin: 50% 0%;
+    }
+    .lower{
+      position: absolute;
+      width: 20px;
+      height: 62px;
+      background-color: #fff;
+      border-radius: 10px;
+      top: 45px;
+      transform-origin: 50% 10px;
+    }
+  }
+}
+
+@keyframes move_up {
+  0%,100%{
+    transform: rotate(-80deg);
+  }
+  50%{
+    transform: rotate(-90deg);
+  }
+}
+@keyframes move_low {
+  0%,100%{
+    transform: rotate(-80deg);
+  }
+  50%{
+    transform: rotate(-100deg);
+  }
+}
