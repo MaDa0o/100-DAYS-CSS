@@ -1,0 +1,130 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+
+*{
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #40b65b;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#chk{
+  display:none;
+  position: absolute;
+
+  &:checked ~ .trigger{
+    .ball{
+      border-radius: 0%;
+      transform: rotate(-180deg);
+      box-shadow: -2px -2px 13px 0 rgba(0,0,0,0.3);
+    }
+    .bg{
+      transform: scale(3);
+    }
+    .ring,.stripes{
+      transform: scale(1);
+      opacity: 0;
+      transition: transform .5s ease-out
+      ,opacity .25s ease-out .25s;
+    }
+  }
+}
+
+.trigger{
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  cursor: pointer;
+  transform: translate(-50%,-50%);
+
+  .ball{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 185px;
+    left: 185px;
+    box-shadow: 2px 2px 3px 0 rgba(0,0,0,0.3);
+    transition: all .5s ease-in-out;
+  }
+  .bg{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    top: 100px;
+    left: 100px;
+    z-index: -1;
+    background-color: #56f57b;
+    transform: scale(0);
+    transition: all .5s ease-in-out;
+  }
+  .ring{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    top: 125px;
+    left: 125px;
+    position: absolute;
+    transform: scale(0);
+    opacity: 1;
+    transition: transform .5s ease-in
+    ,opacity .25s ease-in;
+  }
+
+  .stripes{
+    position: absolute;
+	width: 300px;
+	height: 300px;
+	top: 50px;
+	left: 50px;
+	transform: scale(0);
+	transition: transform .5s ease-in, opacity .25s ease-in;
+    .stripe {
+      position: absolute;
+      height: 26px;
+      width: 4px;
+      background: #fff;
+      top: 137px;
+      left: 148px;
+      
+      @for $i from 1 through 10 {
+        $degree: $i * 36deg;
+        &-#{$i} {
+          transform: rotate($degree) translateY(-120px);
+        }
+      }
+      
+    }
+  }
+}
+
