@@ -1,0 +1,197 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+
+$base:#11131b;
+$light:aliceblue;
+$lspread:hsl(193, 92%, 63%);
+
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #1d222f;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+//reusable block of code
+@mixin light{
+  &::after{
+    display: block;
+  content: '';
+  width: inherit;
+  height: inherit;
+  top: 0px;
+  left: 0px;
+  background-color: $light;
+  border-radius: inherit;
+  box-shadow: 0px 0px 12px 0px $lspread;
+  opacity: 1;
+  animation: flickr 6s ease-in-out ( (random(400) / 100) * 1s ) infinite alternate both;
+}
+}
+
+.neon{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  .txt{
+    width: 300px;
+    height: 200px;
+    // background-color: aqua;
+    
+    .E{
+      left: -20px;
+      position: relative;
+      width: 100px;
+      height: 200px;
+      // background-color: red;
+      float: left;
+
+      .light{
+        background-color: $base;
+        position: absolute;
+        border-radius: 6px;
+        &.left{
+          width: 8px;
+          height: 200px;
+          top: 0px;
+          left: 0px;
+          @include light;
+        }
+        &.top{
+          height: 8px;
+          width: 90px;
+          top: 0px;
+          left: 9px;
+          @include light;
+        }
+        &.middle{
+          height: 8px;
+          width: 80px;
+          top: 92px;
+          left: 9px;
+          @include light;
+        }
+        &.bottom{
+          height: 8px;
+          width: 90px;
+          bottom: 0px;
+          left: 9px;
+          @include light;
+        }
+      }
+    }
+
+    .N{
+      position: relative;
+      width: 100px;
+      height: 200px;
+      // background-color: green;
+      float: left;
+      
+      .light{
+        position: absolute;
+        background-color: $base;
+        border-radius: 6px;
+        
+        &.left{
+          height: 200px;
+          width: 8px;
+          top: 0px;
+          left: 0px;
+          @include light;
+        }
+        &.middle{
+          width: 8px;
+          height: 210px;
+          transform-origin: 50% 50%;
+          transform: translateX(47px) translateY(-4px) rotate(-20deg);
+          @include light;
+        }
+        &.right{
+          height: 200px;
+          width: 8px;
+          top: 0px;
+          right: 0px;
+          @include light;
+        }
+      }
+    }
+    
+    .D{
+      right: -20px;
+      position: relative;
+      width: 100px;
+      height: 200px;
+      // background-color: blue;
+      float: left;
+      
+      .light{
+        position: absolute;
+        
+        &.left{
+          background-color: $base;
+          border-radius: 6px;
+          width: 8px;
+          height: 200px;
+          top: 0px;
+          left: 0px;
+          @include light;
+        }
+        
+        &.circle{
+          width: 200px;
+          height: 200px;
+          border: 8px solid;
+          border-color: $base transparent transparent $base;
+          border-radius: 50%;
+          transform: translateX(-85px) rotate(135deg);
+          animation: flickr-circle 6s ease-in-out ( (random(400) / 100) * 1s ) infinite alternate both;
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes flickr {
+	35%, 37%, 39%, 41%, 100% {
+		background: $light;
+		box-shadow: 0px 0px 10px 0px $lspread;
+	}
+	0%, 34%, 36%, 36%, 38%, 40% {
+		background: none;
+		box-shadow: 0px 0px 6px 0px $base;
+	}
+}
+
+@keyframes flickr-circle {
+	35%, 37%, 39%, 41%, 100% {
+		border-color: $light transparent transparent $light;
+		filter: drop-shadow(0 0 10px $lspread);
+	}
+	0%, 34%, 36%, 36%, 38%, 40% {
+		border-color: $base transparent transparent $base;
+		filter: drop-shadow(0 0 6px $base);
+	}
+}

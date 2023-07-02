@@ -1,0 +1,255 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+/* // use only the available space inside the 400x400 frame */
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #1d222f;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.neon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.neon .txt {
+  width: 300px;
+  height: 200px;
+}
+.neon .txt .E {
+  left: -20px;
+  position: relative;
+  width: 100px;
+  height: 200px;
+  float: left;
+}
+.neon .txt .E .light {
+  background-color: #11131b;
+  position: absolute;
+  border-radius: 6px;
+}
+.neon .txt .E .light.left {
+  width: 8px;
+  height: 200px;
+  top: 0px;
+  left: 0px;
+}
+.neon .txt .E .light.left::after {
+  display: block;
+  content: "";
+  width: inherit;
+  height: inherit;
+  top: 0px;
+  left: 0px;
+  background-color: aliceblue;
+  border-radius: inherit;
+  box-shadow: 0px 0px 12px 0px hsl(193, 92%, 63%);
+  opacity: 1;
+  animation: flickr 6s ease-in-out 3.54s infinite alternate both;
+}
+.neon .txt .E .light.top {
+  height: 8px;
+  width: 90px;
+  top: 0px;
+  left: 9px;
+}
+.neon .txt .E .light.top::after {
+  display: block;
+  content: "";
+  width: inherit;
+  height: inherit;
+  top: 0px;
+  left: 0px;
+  background-color: aliceblue;
+  border-radius: inherit;
+  box-shadow: 0px 0px 12px 0px hsl(193, 92%, 63%);
+  opacity: 1;
+  animation: flickr 6s ease-in-out 3.26s infinite alternate both;
+}
+.neon .txt .E .light.middle {
+  height: 8px;
+  width: 80px;
+  top: 92px;
+  left: 9px;
+}
+.neon .txt .E .light.middle::after {
+  display: block;
+  content: "";
+  width: inherit;
+  height: inherit;
+  top: 0px;
+  left: 0px;
+  background-color: aliceblue;
+  border-radius: inherit;
+  box-shadow: 0px 0px 12px 0px hsl(193, 92%, 63%);
+  opacity: 1;
+  animation: flickr 6s ease-in-out 2.93s infinite alternate both;
+}
+.neon .txt .E .light.bottom {
+  height: 8px;
+  width: 90px;
+  bottom: 0px;
+  left: 9px;
+}
+.neon .txt .E .light.bottom::after {
+  display: block;
+  content: "";
+  width: inherit;
+  height: inherit;
+  top: 0px;
+  left: 0px;
+  background-color: aliceblue;
+  border-radius: inherit;
+  box-shadow: 0px 0px 12px 0px hsl(193, 92%, 63%);
+  opacity: 1;
+  animation: flickr 6s ease-in-out 3.64s infinite alternate both;
+}
+.neon .txt .N {
+  position: relative;
+  width: 100px;
+  height: 200px;
+  float: left;
+}
+.neon .txt .N .light {
+  position: absolute;
+  background-color: #11131b;
+  border-radius: 6px;
+}
+.neon .txt .N .light.left {
+  height: 200px;
+  width: 8px;
+  top: 0px;
+  left: 0px;
+}
+.neon .txt .N .light.left::after {
+  display: block;
+  content: "";
+  width: inherit;
+  height: inherit;
+  top: 0px;
+  left: 0px;
+  background-color: aliceblue;
+  border-radius: inherit;
+  box-shadow: 0px 0px 12px 0px hsl(193, 92%, 63%);
+  opacity: 1;
+  animation: flickr 6s ease-in-out 2.02s infinite alternate both;
+}
+.neon .txt .N .light.middle {
+  width: 8px;
+  height: 210px;
+  transform-origin: 50% 50%;
+  transform: translateX(47px) translateY(-4px) rotate(-20deg);
+}
+.neon .txt .N .light.middle::after {
+  display: block;
+  content: "";
+  width: inherit;
+  height: inherit;
+  top: 0px;
+  left: 0px;
+  background-color: aliceblue;
+  border-radius: inherit;
+  box-shadow: 0px 0px 12px 0px hsl(193, 92%, 63%);
+  opacity: 1;
+  animation: flickr 6s ease-in-out 2.57s infinite alternate both;
+}
+.neon .txt .N .light.right {
+  height: 200px;
+  width: 8px;
+  top: 0px;
+  right: 0px;
+}
+.neon .txt .N .light.right::after {
+  display: block;
+  content: "";
+  width: inherit;
+  height: inherit;
+  top: 0px;
+  left: 0px;
+  background-color: aliceblue;
+  border-radius: inherit;
+  box-shadow: 0px 0px 12px 0px hsl(193, 92%, 63%);
+  opacity: 1;
+  animation: flickr 6s ease-in-out 2.1s infinite alternate both;
+}
+.neon .txt .D {
+  right: -20px;
+  position: relative;
+  width: 100px;
+  height: 200px;
+  float: left;
+}
+.neon .txt .D .light {
+  position: absolute;
+}
+.neon .txt .D .light.left {
+  background-color: #11131b;
+  border-radius: 6px;
+  width: 8px;
+  height: 200px;
+  top: 0px;
+  left: 0px;
+}
+.neon .txt .D .light.left::after {
+  display: block;
+  content: "";
+  width: inherit;
+  height: inherit;
+  top: 0px;
+  left: 0px;
+  background-color: aliceblue;
+  border-radius: inherit;
+  box-shadow: 0px 0px 12px 0px hsl(193, 92%, 63%);
+  opacity: 1;
+  animation: flickr 6s ease-in-out 3.06s infinite alternate both;
+}
+.neon .txt .D .light.circle {
+  width: 200px;
+  height: 200px;
+  border: 8px solid;
+  border-color: #11131b transparent transparent #11131b;
+  border-radius: 50%;
+  transform: translateX(-85px) rotate(135deg);
+  animation: flickr-circle 6s ease-in-out 1.77s infinite alternate both;
+}
+
+@keyframes flickr {
+  35%, 37%, 39%, 41%, 100% {
+    background: aliceblue;
+    box-shadow: 0px 0px 10px 0px hsl(193, 92%, 63%);
+  }
+  0%, 34%, 36%, 36%, 38%, 40% {
+    background: none;
+    box-shadow: 0px 0px 6px 0px #11131b;
+  }
+}
+@keyframes flickr-circle {
+  35%, 37%, 39%, 41%, 100% {
+    border-color: aliceblue transparent transparent aliceblue;
+    filter: drop-shadow(0 0 10px hsl(193, 92%, 63%));
+  }
+  0%, 34%, 36%, 36%, 38%, 40% {
+    border-color: #11131b transparent transparent #11131b;
+    filter: drop-shadow(0 0 6px #11131b);
+  }
+}/*# sourceMappingURL=style.css.map */
